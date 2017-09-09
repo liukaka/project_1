@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html dir="ltr" class="ltr" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8" />
+    <title>Your Site</title>
+    <base href="http://qd111556430527.web.xorder.com/" />
+    <meta name="description" content="xorder" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/bootstrap.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/stylesheet.css" rel="stylesheet" />
+    <link href="catalog/view/9/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/animation.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/font-awesome.min.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/font.css" rel="stylesheet" />
+    <link href="catalog/view/9/javascript/jquery/colorbox/colorbox.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/pavblog.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/default/stylesheet/pavtestimonial.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/sliderlayer/css/typo.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/pavmegamenu/style.css" rel="stylesheet" />
+    <style>    body{      background:url( "catalog/view/theme/demo_001/image/pattern/none.png") repeat  left top !important;    }</style>
+    <style>  .box-heading{font-family: Microsoft YaHei&amp;quot;,SimHei,arial;font-size:16px} {font-family:Verdana, Geneva, sans-serif}</style>
+    <script type="text/javascript" src="catalog/view/9/javascript/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="catalog/view/9/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="catalog/view/9/javascript/jquery/ui/external/jquery.cookie.js"></script>
+    <script type="text/javascript" src="catalog/view/9/javascript/common.js"></script>
+    <script type="text/javascript" src="catalog/view/9/theme/demo_001/javascript/common.js"></script>
+    <script type="text/javascript" src="catalog/view/9/javascript/jquery/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="catalog/view/9/javascript/jquery/colorbox/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="catalog/view/9/javascript/layerslider/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="catalog/view/9/javascript/layerslider/jquery.themepunch.revolution.min.js"></script>
+    <!--[if lt IE 9]><script src="catalog/view/9/javascript/html5.js"></script><script src="catalog/view/9/javascript/respond.min.js"></script><link rel="stylesheet" type="text/css" href="catalog/view/9/theme/demo_001/stylesheet/ie8.css" /><![endif]-->
+</head>
+<body id="offcanvas-container" class="offcanvas-container layout-fullwidth page-home none" style="font-family: Verdana, Geneva, sans-serif;font-size:16px">
+<section id="page"  class="offcanvas-pusher" role="main">
+    <section id="header">
+        <section id="topbar">
+            <div class="container">
+                <div class="pull-left">
+                    <div class="row topbar hidden-sm hidden-xs">
+                        <div class="welcome pull-left tz-text">
+                            Welcome visitor you can
+                            <a href="http://qd111556430527.web.xorder.com/?route=account/login">login</a> or
+                            <a href="http://qd111556430527.web.xorder.com/?route=account/register">create an account</a>.
+                        </div>
+                        <ul class="links pull-left">
+                            <li><a class="account" href="http://qd111556430527.web.xorder.com/?route=account/account"><span class="fa fa-user"></span><span class="text-link hidden-xs hidden-sm">My Account</span></a></li>
+                        </ul>
+                        <div class="currency pull-left"></div>
+                        <div class="language pull-left">
+                            <form action="http://qd111556430527.web.xorder.com/?route=module/language" method="post" enctype="multipart/form-data">
+                                <div class="btn-group">
+                                    <button class="btn btn-theme-normal dropdown-toggle" data-toggle="dropdown" style="border: 0px;"> <img src="image/flags/gb.png" alt="English" title="English" /> <span class="hidden-xs hidden-sm hidden-md">Language</span> <i class="fa fa-angle-down"></i></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a onclick="$('input[name=\'language_code\']').attr('value', 'en'); $(this).parent().parent().parent().parent().submit();"><img src="image/flags/gb.png" alt="English" title="English" /> English</a></li>
+                                        <li><a onclick="$('input[name=\'language_code\']').attr('value', 'zh_CN'); $(this).parent().parent().parent().parent().submit();"><img src="image/flags/cn.png" alt="简体中文" title="简体中文" /> 简体中文</a></li>
+                                    </ul>
+                                </div>
+                                <input type="hidden" name="language_code" value="" />
+                                <input type="hidden" name="redirect" value="http://qd111556430527.web.xorder.com/?route=common/home" />
+                            </form>
+                        </div>
+                        <div class="header-right col-lg-5 col-md-6 col-sm-8 col-xs-8 inner">
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <div id="cart">
+                        <div class="heading">
+                            <a> <span id="cart-total">0 item(s) - $0.00</span> </a>
+                        </div>
+                        <div class="content">
+                            <div class="empty">
+                                Your shopping cart is empty!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <div id="search" class="pull-right">
+                        <input type="text" name="search" placeholder="Search" value="" />
+                        <span class="fa fa-search button-search"></span>
+                    </div>
+                </div>
+                <div class="show-mobile pull-right hidden-lg hidden-md">
+                    <div class="quick-access pull-right">
+                        <div class="quickaccess-toggle">
+                            <i class="fa fa-list"></i>
+                        </div>
+                        <div class="inner-toggle">
+                            <ul class="links pull-left">
+                                <li><a class="wishlist" href="http://qd111556430527.web.xorder.com/?route=account/wishlist" id="wishlist-total"><span class="fa fa-shopping-cart"></span>Inquiry Cart (0)</a></li>
+                                <li><a class="account" href="http://qd111556430527.web.xorder.com/?route=account/account"><span class="fa fa-user"></span>My Account</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="quick-user pull-right">
+                        <div class="quickaccess-toggle">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="inner-toggle">
+                            <div class="login links">
+                                Welcome visitor you can
+                                <a href="http://qd111556430527.web.xorder.com/?route=account/login">login</a> or
+                                <a href="http://qd111556430527.web.xorder.com/?route=account/register">create an account</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pav-mainnav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div id="logo">
+                            <a href="http://qd111556430527.web.xorder.com/"><img src="http://qd111556430527.web.xorder.com/image/9/xorder/logo_theme.png" title="Your Store" alt="Your Store" /></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 mainmenu">
+                        <div class="pav-megamenu">
+                            <div class="navbar navbar-default">
+                                <div id="mainmenutop" class="megamenu" role="navigation">
+                                    <div class="navbar-header">
+                                        <a href="javascript:;" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+                                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                            <ul class="nav navbar-nav megamenu">
+                                                <li onclick="testtest1(1);" class="home"><a href="?route=common/home"><span id="test1" class="menu-title">Home</span></a></li>
+                                                <li onclick="testtest1(2);" class="parent dropdown  aligned-left"><a class="dropdown-toggle" data-toggle="dropdown" href="http://qd111556430527.web.xorder.com/?route=product/category&amp;path=1394"><span id="test2" class="menu-title"> Coats &amp; Jackets</span><b class="caret"></b></a>
+                                                    <div class="dropdown-menu level1">
+                                                        <div class="dropdown-menu-inner">
+                                                            <div class="row">
+                                                                <div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu">
+                                                                    <div class="mega-col-inner">
+                                                                        <ul>
+                                                                            <li class=" "><a href="Everyday Fashion"><span class="menu-title">Everyday Fashion</span></a></li>
+                                                                            <li class=" "><a href=""><span class="menu-title">Modern Classics</span></a></li>
+                                                                            <li class=" "><a href=""><span class="menu-title">Accessories</span></a></li>
+                                                                            <li class=" "><a href=""><span class="menu-title">Divided</span></a></li>
+                                                                            <li class="parent dropdown-submenu "><a class="dropdown-toggle" data-toggle="dropdown" href=""><span class="menu-title">Party</span><b class="caret"></b></a>
+                                                                                <div class="dropdown-menu level2">
+                                                                                    <div class="dropdown-menu-inner">
+                                                                                        <div class="row">
+                                                                                            <div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu">
+                                                                                                <div class="mega-col-inner">
+                                                                                                    <ul>
+                                                                                                        <li class=" "><a href=""><span class="menu-title">Lime Pullover</span></a></li>
+                                                                                                        <li class=" "><a href=""><span class="menu-title">Cherry Dress</span></a></li>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div></li>
+                                                <li onclick="testtest1(3);" class=""><a href="/about_us"><span id="test3" class="menu-title">About Us</span></a></li>
+                                                <li onclick="testtest1(4);" class=""><a href="blogs"><span id="test4" class="menu-title">blog</span></a></li>
+                                                <li onclick="testtest1(5);" class=""><a href="?route=information/contact"><span id="test5" class="menu-title">deals</span></a></li>
+                                                <li onclick="testtest1(6);" class=""><a href="?route=information/contact"><span id="test6" class="menu-title">contact</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="sys-notification">
+        <div class="container">
+            <div id="notification"></div>
+        </div>
+    </section>
+    <section id="pav-slideshow" class="pav-slideshow">
+        <div class="bannercontainer banner-fullwidth" style="padding: 0;margin: 0;">
+            <div id="sliderlayer6830" class="rev_slider fullwidthbanner" style="width:100%;height:457px; ">
+                <ul>
+                    <li data-masterspeed="300" data-transition="curtain-2" data-slotamount="7" data-thumb="http://qd111556430527.web.xorder.com/image/9/data/chanpin/chanpin1.jpg"><img src="http://qd111556430527.web.xorder.com/image/9/data/chanpin/chanpin1.jpg" alt="" />
+                        <div class="caption big_c28 fade easeOutExpo   easeOutExpo " data-x="10" data-y="195" data-speed="300" data-start="120" data-easing="easeOutExpo">
+                            <span>COOPERATION CREATES MIRACLES！</span>
+                        </div>
+                        <div class="caption  fade easeOutExpo   easeOutExpo " data-x="234" data-y="251" data-speed="300" data-start="800" data-easing="easeOutExpo">
+                            <span style="color:white">We sincerely hope that you can become our partners and we will create new miracles with mutual efforts!</span>
+                        </div>
+                        <div class="caption banner_a1 fade easeOutExpo   easeOutExpo " data-x="41" data-y="318" data-speed="300" data-start="1200" data-easing="easeOutExpo">
+                            <div style="width:1000px; text-align:center; font-size:14px; line-height:14px;">
+                                <div class="banner_a">
+                                    <a class="banner_a1">Register</a>
+                                    <a class="banner_a2">Send Inquiry</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption  fade easeOutExpo   easeOutExpo " data-x="0" data-y="0" data-speed="300" data-start="1600" data-easing="easeOutExpo">
+                            <img alt="data/home/1.png" src="http://qd111556430527.web.xorder.com/image/9/data/home/1.png" />
+                        </div></li>
+                    <li data-masterspeed="300" data-transition="curtain-2" data-slotamount="7" data-thumb="http://qd111556430527.web.xorder.com/image/9/data/banner/banner1.jpg"><img src="http://qd111556430527.web.xorder.com/image/9/data/banner/banner1.jpg" alt="" />
+                        <div class="caption new lfr easeOutExpo   easeOutExpo " data-x="188" data-y="151" data-speed="300" data-start="1077" data-easing="easeOutExpo">
+                            <span style="font-size:48px">COOPERATION CREATES MIRACLES！</span>
+                        </div>
+                        <div class="caption new1 lfr easeOutExpo   easeOutExpo " data-x="59" data-y="296" data-speed="300" data-start="1639" data-easing="easeOutExpo">
+                            <div style="width:1000px; text-align:center; font-size:14px; line-height:14px;">
+                                <div class="banner_a">
+                                    <a class="banner_a1">Register</a>
+                                    <a class="banner_a2">Send Inquiry</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption  lfr easeOutExpo   easeOutExpo " data-x="236" data-y="236" data-speed="300" data-start="1200" data-easing="easeOutExpo">
+                            <span style="color:white">We sincerely hope that you can become our partners and we will create new miracles with mutual efforts!</span>
+                        </div></li>
+                </ul>
+                <div class="tp-bannertimer tp-top"></div>
+            </div>
+        </div>
+        <script type="text/javascript">var tpj=jQuery; if (tpj.fn.cssOriginal!=undefined)tpj.fn.css = tpj.fn.cssOriginal;tpj('#sliderlayer6830').revolution({delay:9000,startheight:457,startwidth:1143,hideThumbs:0,thumbWidth:100,thumbHeight:50,thumbAmount:5,navigationType:"bullet",navigationArrows:"verticalcentered",navigationStyle:"round",  navOffsetHorizontal:0,navOffsetVertical:20, touchenabled:"on",onHoverStop:"on",shuffle:"off",stopAtSlide:-1,stopAfterLoops:-1,hideCaptionAtLimit:0,hideAllCaptionAtLilmit:0,hideSliderAtLimit:0,fullWidth:"on",shadow:0   });</script>
+    </section>
+</section>
+</body>
+</html>

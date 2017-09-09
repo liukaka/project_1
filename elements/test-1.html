@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html dir="ltr" class="ltr" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8" />
+    <title>Your Site</title>
+    <base href="http://qd111556430527.web.xorder.com/" />
+    <meta name="description" content="xorder" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/bootstrap.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/stylesheet.css" rel="stylesheet" />
+    <link href="catalog/view/9/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/animation.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/font-awesome.min.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/font.css" rel="stylesheet" />
+    <link href="catalog/view/9/javascript/jquery/colorbox/colorbox.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/pavblog.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/default/stylesheet/pavtestimonial.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/sliderlayer/css/typo.css" rel="stylesheet" />
+    <link href="catalog/view/9/theme/demo_001/stylesheet/pavmegamenu/style.css" rel="stylesheet" />
+    <style>    body{      background:url( "catalog/view/theme/demo_001/image/pattern/none.png") repeat  left top !important;    }</style>
+    <style>  .box-heading{font-family: Microsoft YaHei&amp;quot;,SimHei,arial;font-size:16px} {font-family:Verdana, Geneva, sans-serif}</style>
+    <script type="text/javascript" src="catalog/view/9/javascript/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="catalog/view/9/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="catalog/view/9/javascript/jquery/ui/external/jquery.cookie.js"></script>
+    <script type="text/javascript" src="catalog/view/9/javascript/common.js"></script>
+    <script type="text/javascript" src="catalog/view/9/theme/demo_001/javascript/common.js"></script>
+    <script type="text/javascript" src="catalog/view/9/javascript/jquery/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="catalog/view/9/javascript/jquery/colorbox/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="catalog/view/9/javascript/layerslider/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="catalog/view/9/javascript/layerslider/jquery.themepunch.revolution.min.js"></script>
+    <!--[if lt IE 9]><script src="catalog/view/9/javascript/html5.js"></script><script src="catalog/view/9/javascript/respond.min.js"></script><link rel="stylesheet" type="text/css" href="catalog/view/9/theme/demo_001/stylesheet/ie8.css" /><![endif]-->
+</head>
+<body id="offcanvas-container" class="offcanvas-container layout-fullwidth page-home none" style="font-family: Verdana, Geneva, sans-serif;font-size:16px">
+<section id="page" class="offcanvas-pusher" role="main">
+    <section id="header">
+        <section id="topbar">
+            <div class="container">
+                <div class="pull-left">
+                    <div class="row topbar hidden-sm hidden-xs">
+                        <div class="welcome pull-left tz-text">
+                            Welcome visitor you can
+                            <a href="http://qd111556430527.web.xorder.com/?route=account/login">login</a> or
+                            <a href="http://qd111556430527.web.xorder.com/?route=account/register">create an account</a>.
+                        </div>
+                        <ul class="links pull-left">
+                            <li><a class="account" href="http://qd111556430527.web.xorder.com/?route=account/account"><span class="fa fa-user"></span><span class="text-link hidden-xs hidden-sm">My Account</span></a></li>
+                        </ul>
+                        <div class="currency pull-left"></div>
+                        <div class="language pull-left">
+                            <form action="http://qd111556430527.web.xorder.com/?route=module/language" method="post" enctype="multipart/form-data">
+                                <div class="btn-group">
+                                    <button class="btn btn-theme-normal dropdown-toggle" data-toggle="dropdown" style="border: 0px;"> <img src="image/flags/gb.png" alt="English" title="English" /> <span class="hidden-xs hidden-sm hidden-md">Language</span> <i class="fa fa-angle-down"></i></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a onclick="$('input[name=\'language_code\']').attr('value', 'en'); $(this).parent().parent().parent().parent().submit();"><img src="image/flags/gb.png" alt="English" title="English" /> English</a></li>
+                                        <li><a onclick="$('input[name=\'language_code\']').attr('value', 'zh_CN'); $(this).parent().parent().parent().parent().submit();"><img src="image/flags/cn.png" alt="简体中文" title="简体中文" /> 简体中文</a></li>
+                                    </ul>
+                                </div>
+                                <input type="hidden" name="language_code" value="" />
+                                <input type="hidden" name="redirect" value="http://qd111556430527.web.xorder.com/?route=common/home" />
+                            </form>
+                        </div>
+                        <div class="header-right col-lg-5 col-md-6 col-sm-8 col-xs-8 inner">
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <div id="cart">
+                        <div class="heading">
+                            <a> <span id="cart-total">0 item(s) - $0.00</span> </a>
+                        </div>
+                        <div class="content">
+                            <div class="empty">
+                                Your shopping cart is empty!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <div id="search" class="pull-right">
+                        <input type="text" name="search" placeholder="Search" value="" />
+                        <span class="fa fa-search button-search"></span>
+                    </div>
+                </div>
+                <div class="show-mobile pull-right hidden-lg hidden-md">
+                    <div class="quick-access pull-right">
+                        <div class="quickaccess-toggle">
+                            <i class="fa fa-list"></i>
+                        </div>
+                        <div class="inner-toggle">
+                            <ul class="links pull-left">
+                                <li><a class="wishlist" href="http://qd111556430527.web.xorder.com/?route=account/wishlist" id="wishlist-total"><span class="fa fa-shopping-cart"></span>Inquiry Cart (0)</a></li>
+                                <li><a class="account" href="http://qd111556430527.web.xorder.com/?route=account/account"><span class="fa fa-user"></span>My Account</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="quick-user pull-right">
+                        <div class="quickaccess-toggle">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="inner-toggle">
+                            <div class="login links">
+                                Welcome visitor you can
+                                <a href="http://qd111556430527.web.xorder.com/?route=account/login">login</a> or
+                                <a href="http://qd111556430527.web.xorder.com/?route=account/register">create an account</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pav-mainnav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div id="logo">
+                            <a href="http://qd111556430527.web.xorder.com/"><img src="http://qd111556430527.web.xorder.com/image/9/xorder/logo_theme.png" title="Your Store" alt="Your Store" /></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 mainmenu">
+                        <div class="pav-megamenu">
+                            <div class="navbar navbar-default">
+                                <div id="mainmenutop" class="megamenu" role="navigation">
+                                    <div class="navbar-header">
+                                        <a href="javascript:;" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+                                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                            <ul class="nav navbar-nav megamenu">
+                                                <li onclick="testtest1(1);" class="home"><a href="?route=common/home"><span id="test1" class="menu-title">Home</span></a></li>
+                                                <li onclick="testtest1(2);" class="parent dropdown  aligned-left"><a class="dropdown-toggle" data-toggle="dropdown" href="http://qd111556430527.web.xorder.com/?route=product/category&amp;path=1394"><span id="test2" class="menu-title"> Coats &amp; Jackets</span><b class="caret"></b></a>
+                                                    <div class="dropdown-menu level1">
+                                                        <div class="dropdown-menu-inner">
+                                                            <div class="row">
+                                                                <div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu">
+                                                                    <div class="mega-col-inner">
+                                                                        <ul>
+                                                                            <li class=" "><a href="Everyday Fashion"><span class="menu-title">Everyday Fashion</span></a></li>
+                                                                            <li class=" "><a href=""><span class="menu-title">Modern Classics</span></a></li>
+                                                                            <li class=" "><a href=""><span class="menu-title">Accessories</span></a></li>
+                                                                            <li class=" "><a href=""><span class="menu-title">Divided</span></a></li>
+                                                                            <li class="parent dropdown-submenu "><a class="dropdown-toggle" data-toggle="dropdown" href=""><span class="menu-title">Party</span><b class="caret"></b></a>
+                                                                                <div class="dropdown-menu level2">
+                                                                                    <div class="dropdown-menu-inner">
+                                                                                        <div class="row">
+                                                                                            <div class="mega-col col-xs-12 col-sm-12 col-md-12" data-type="menu">
+                                                                                                <div class="mega-col-inner">
+                                                                                                    <ul>
+                                                                                                        <li class=" "><a href=""><span class="menu-title">Lime Pullover</span></a></li>
+                                                                                                        <li class=" "><a href=""><span class="menu-title">Cherry Dress</span></a></li>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div></li>
+                                                <li onclick="testtest1(3);" class=""><a href="/about_us"><span id="test3" class="menu-title">About Us</span></a></li>
+                                                <li onclick="testtest1(4);" class=""><a href="blogs"><span id="test4" class="menu-title">blog</span></a></li>
+                                                <li onclick="testtest1(5);" class=""><a href="?route=information/contact"><span id="test5" class="menu-title">deals</span></a></li>
+                                                <li onclick="testtest1(6);" class=""><a href="?route=information/contact"><span id="test6" class="menu-title">contact</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="sys-notification">
+        <div class="container">
+            <div id="notification"></div>
+        </div>
+    </section>
+    <section id="pav-slideshow" class="pav-slideshow">
+        <div class="bannercontainer banner-fullwidth" style="padding: 0;margin: 0;">
+            <div id="sliderlayer6830" class="rev_slider fullwidthbanner" style="width:100%;height:457px; ">
+                <ul>
+                    <li data-masterspeed="300" data-transition="curtain-2" data-slotamount="7" data-thumb="http://qd111556430527.web.xorder.com/image/9/data/chanpin/chanpin1.jpg"><img src="http://qd111556430527.web.xorder.com/image/9/data/chanpin/chanpin1.jpg" alt="" />
+                        <div class="caption big_c28 fade easeOutExpo   easeOutExpo " data-x="10" data-y="195" data-speed="300" data-start="120" data-easing="easeOutExpo">
+                            <span>COOPERATION CREATES MIRACLES！</span>
+                        </div>
+                        <div class="caption  fade easeOutExpo   easeOutExpo " data-x="234" data-y="251" data-speed="300" data-start="800" data-easing="easeOutExpo">
+                            <span style="color:white">We sincerely hope that you can become our partners and we will create new miracles with mutual efforts!</span>
+                        </div>
+                        <div class="caption banner_a1 fade easeOutExpo   easeOutExpo " data-x="41" data-y="318" data-speed="300" data-start="1200" data-easing="easeOutExpo">
+                            <div style="width:1000px; text-align:center; font-size:14px; line-height:14px;">
+                                <div class="banner_a">
+                                    <a class="banner_a1">Register</a>
+                                    <a class="banner_a2">Send Inquiry</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption  fade easeOutExpo   easeOutExpo " data-x="0" data-y="0" data-speed="300" data-start="1600" data-easing="easeOutExpo">
+                            <img alt="data/home/1.png" src="http://qd111556430527.web.xorder.com/image/9/data/home/1.png" />
+                        </div></li>
+                    <li data-masterspeed="300" data-transition="curtain-2" data-slotamount="7" data-thumb="http://qd111556430527.web.xorder.com/image/9/data/banner/banner1.jpg"><img src="http://qd111556430527.web.xorder.com/image/9/data/banner/banner1.jpg" alt="" />
+                        <div class="caption new lfr easeOutExpo   easeOutExpo " data-x="188" data-y="151" data-speed="300" data-start="1077" data-easing="easeOutExpo">
+                            <span style="font-size:48px">COOPERATION CREATES MIRACLES！</span>
+                        </div>
+                        <div class="caption new1 lfr easeOutExpo   easeOutExpo " data-x="59" data-y="296" data-speed="300" data-start="1639" data-easing="easeOutExpo">
+                            <div style="width:1000px; text-align:center; font-size:14px; line-height:14px;">
+                                <div class="banner_a">
+                                    <a class="banner_a1">Register</a>
+                                    <a class="banner_a2">Send Inquiry</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caption  lfr easeOutExpo   easeOutExpo " data-x="236" data-y="236" data-speed="300" data-start="1200" data-easing="easeOutExpo">
+                            <span style="color:white">We sincerely hope that you can become our partners and we will create new miracles with mutual efforts!</span>
+                        </div></li>
+                </ul>
+                <div class="tp-bannertimer tp-top"></div>
+            </div>
+        </div>
+        <script type="text/javascript">var tpj=jQuery; if (tpj.fn.cssOriginal!=undefined)tpj.fn.css = tpj.fn.cssOriginal;tpj('#sliderlayer6830').revolution({delay:9000,startheight:457,startwidth:1143,hideThumbs:0,thumbWidth:100,thumbHeight:50,thumbAmount:5,navigationType:"bullet",navigationArrows:"verticalcentered",navigationStyle:"round",  navOffsetHorizontal:0,navOffsetVertical:20, touchenabled:"on",onHoverStop:"on",shuffle:"off",stopAtSlide:-1,stopAfterLoops:-1,hideCaptionAtLimit:0,hideAllCaptionAtLilmit:0,hideSliderAtLimit:0,fullWidth:"on",shadow:0   });</script>
+    </section>
+    <section id="columns" class="offcanvas-siderbars">
+        <div class="container">
+            <div class="row visible-xs">
+                <div class="container">
+                    <div class="offcanvas-sidebars-buttons">
+                        <button type="button" data-for="column-left" class="pull-left btn btn-danger"><i class="glyphicon glyphicon-indent-left"></i> Sidebar Left</button>
+                        <button type="button" data-for="column-right" class="pull-right btn btn-danger">Sidebar Right <i class="glyphicon glyphicon-indent-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <section class="col-lg-12 col-sm-12 col-xs-12">
+                    <div id="content">
+                        <div class="content-top">
+                            <div class="box pav-custom  ">
+                                <div class="box-content">
+                                    <div class="point_box">
+                                        <h3>FEATURE</h3>
+                                        <p>OUR FEATURED AND SKILLS</p>
+                                        <div class="foul_point">
+                                            <div class="point">
+                                                <div class="point_img point_img1">
+                                                    &nbsp;
+                                                </div>
+                                                <em>Green</em>
+                                                <strong>We produce the hand-made product, and select all materials with environmental-friendly concept</strong>
+                                            </div>
+                                            <div class="point">
+                                                <div class="point_img point_img2">
+                                                    &nbsp;
+                                                </div>
+                                                <em>High Quality</em>
+                                                <strong>Our well-equipped, quality control throughout the production of the various stages</strong>
+                                            </div>
+                                            <div class="point">
+                                                <div class="point_img point_img3">
+                                                    &nbsp;
+                                                </div>
+                                                <em>Reseach and development</em>
+                                                <strong>Export-oriented manufacturing enterprises, independent research and development, its own brand.</strong>
+                                            </div>
+                                            <div class="point">
+                                                <div class="point_img point_img4">
+                                                    &nbsp;
+                                                </div>
+                                                <em>Excellent Team</em>
+                                                <strong>Class design team to make sure we are the key players in the radiator business.</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>    $(function(){        $('.min_photo ul li').each(function(){            $(this).mouseenter(function(){                 $('.max_photo ul li').stop(true,true);                var i = $(this).index();                $('.max_photo ul li').not($('.max_photo ul li').eq(i)).animate({                    'height':'0','padding':'0',                },200);                $('.max_photo ul li').eq(i).animate({                    'height':'240px',                },200);            });        });    });</script>
+                            <div class="box-banners prefix"></div>
+                            <div class="box pav-custom  ">
+                                <div class="box-content">
+                                    <div class="chanpin_box">
+                                        <div class="chanpin_div" style="width:23.5%; margin-right:2%">
+                                            <div class="chanpin_div_o">
+                                                <img alt="" src="http://img.xorder.com/demo_001/chanpin1.jpg" style="height:172px; width:278px" />
+                                                <a class="chanpin_a" href="#"><strong>Human of the world</strong><em>Animation,Photography</em></a>
+                                            </div>
+                                            <div class="chanpin_div_o">
+                                                <img alt="" src="http://img.xorder.com/demo_001/chanpin2.jpg" style="height:172px; width:278px" />
+                                                <a class="chanpin_a" href="#"><strong>Human of the world</strong><em>Animation,Photography</em></a>
+                                            </div>
+                                        </div>
+                                        <div class="chanpin_div" style="width:23.5%; margin-right:2%">
+                                            <div class="chanpin_div_o">
+                                                <img alt="" src="http://img.xorder.com/demo_001/chanpin3.jpg" style="height:172px; width:278px" />
+                                                <a class="chanpin_a" href="#"><strong>Human of the world</strong><em>Animation,Photography</em></a>
+                                            </div>
+                                            <div class="chanpin_div_o">
+                                                <img alt="" src="http://img.xorder.com/demo_001/chanpin4.jpg" style="height:172px; width:278px" />
+                                                <a class="chanpin_a" href="#"><strong>Human of the world</strong><em>Animation,Photography</em></a>
+                                            </div>
+                                        </div>
+                                        <div class="chanpin_div" style="width:49%;">
+                                            <div class="chanpin_div_o">
+                                                <img alt="" src="http://img.xorder.com/demo_001/chanpin5.png" style="height:365px; width:585px" />
+                                                <a class="chanpin_a chanpin_a2" href="#"><strong>Human of the world</strong><em>Animation,Photography</em></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>    $(function(){        $('.min_photo ul li').each(function(){            $(this).mouseenter(function(){                 $('.max_photo ul li').stop(true,true);                var i = $(this).index();                $('.max_photo ul li').not($('.max_photo ul li').eq(i)).animate({                    'height':'0','padding':'0',                },200);                $('.max_photo ul li').eq(i).animate({                    'height':'240px',                },200);            });        });    });</script>
+                        </div>
+                    </div>
+                </section>
+                <style>    ul,li{        padding: 0;        margin: 0;        list-style-type: none;    }    .photo{        width:460px;        height:330px;        margin-top: 20px;    }    .max_photo{        width: 460px;        height:240px;        overflow: hidden;    }    .max_photo ul{        width:460px;        height:240px;        overflow: hidden;    }    .max_photo ul li{        width:460px;        height:0;        overflow: hidden;    }    .max_photo ul li img{        width: 100%;        height:100%;        background: red;    }    .min_photo{    padding-left: 20px;    background: #f7f7f7;        width: 460px;        height:50px;    }     .min_photo ul{        width: 460px;        height: 40px;        padding: 5px 18px;     }     .min_photo ul li {        width: 80px;        height:40px;        float: left;        margin:0px 8px;         cursor:pointer;        overflow: hidden;        padding:0;     }     .min_photo ul li img{        width: 100%;        height:100%;     }      .min_photo ul li img:hover{      border: 1px solid #ff7900;      }      </style>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="footer-top">
+            <div class="">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-md-12">
+                        <div class="box pav-custom  ">
+                            <div class="box-content">
+                                <div style="font-size:36px; color:#666; line-height:36px; font-weight:bold; padding:50px 0 10px 0; text-align: center; font-weight:700;font-family: proximanova-regular, serif !important;">
+                                    LATEST NEWS
+                                </div>
+                                <div style="font-size:16px; color:#80bc80; line-height:16px; text-align: center;">
+                                    WE RECOMMEND
+                                </div>
+                            </div>
+                        </div>
+                        <script>    $(function(){        $('.min_photo ul li').each(function(){            $(this).mouseenter(function(){                 $('.max_photo ul li').stop(true,true);                var i = $(this).index();                $('.max_photo ul li').not($('.max_photo ul li').eq(i)).animate({                    'height':'0','padding':'0',                },200);                $('.max_photo ul li').eq(i).animate({                    'height':'240px',                },200);            });        });    });</script>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-md-12">
+                        <div class="box pav-block bloglatest">
+                            <div class="pavblog-latest clearfix container">
+                                <div class="col-lg-4 pavblock blogitem">
+                                    <div class="blog-item">
+                                        <div class="blog-body clearfix">
+                                            <div class="image clearfix">
+                                                <img src="http://qd111556430527.web.xorder.com/image/9/cache/data/blog/blog3-870x588-112x112_9.jpg" alt="It's always seems impossible until it's done" />
+                                            </div>
+                                            <div class="group-blog">
+                                                <div class="blog-title">
+                                                    <a href="http://qd111556430527.web.xorder.com/?route=pavblog/blog&amp;id=460" title="It's always seems impossible until it's done">It's always seems impossible until it's done...</a>
+                                                </div>
+                                                <div class="description" style="line-height: 24px;">
+                                                    Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus...
+                                                </div>
+                                                <p><a href="http://qd111556430527.web.xorder.com/?route=pavblog/blog&amp;id=460" class="readmore">Read more</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 pavblock blogitem">
+                                    <div class="blog-item">
+                                        <div class="blog-body clearfix">
+                                            <div class="image clearfix">
+                                                <img src="http://qd111556430527.web.xorder.com/image/9/cache/data/blog/blog2-870x588-112x112_9.jpg" alt="It's always seems impossible until it's done" />
+                                            </div>
+                                            <div class="group-blog">
+                                                <div class="blog-title">
+                                                    <a href="http://qd111556430527.web.xorder.com/?route=pavblog/blog&amp;id=459" title="It's always seems impossible until it's done">It's always seems impossible until it's done...</a>
+                                                </div>
+                                                <div class="description" style="line-height: 24px;">
+                                                    Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus...
+                                                </div>
+                                                <p><a href="http://qd111556430527.web.xorder.com/?route=pavblog/blog&amp;id=459" class="readmore">Read more</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 pavblock blogitem">
+                                    <div class="blog-item">
+                                        <div class="blog-body clearfix">
+                                            <div class="image clearfix">
+                                                <img src="http://qd111556430527.web.xorder.com/image/9/cache/data/blog/blog6-870x588-112x112_9.jpg" alt="It's always seems impossible until it's done" />
+                                            </div>
+                                            <div class="group-blog">
+                                                <div class="blog-title">
+                                                    <a href="http://qd111556430527.web.xorder.com/?route=pavblog/blog&amp;id=458" title="It's always seems impossible until it's done">It's always seems impossible until it's done...</a>
+                                                </div>
+                                                <div class="description" style="line-height: 24px;">
+                                                    Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus...
+                                                </div>
+                                                <p><a href="http://qd111556430527.web.xorder.com/?route=pavblog/blog&amp;id=458" class="readmore">Read more</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>       $(function(){         //     $('.blogitem ').mouseover(function(){                   //          $('.blog-title a').css('color',"#fff");      //     });      //      $('.blogitem ').mouseout(function(){                   //          $('.blog-title a').css('color',"#21272c");      //     });      // });   </script>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-md-12">
+                        <div id="pavtestimonial17551" class="carousel slide pavtestimonial box pinglun_box">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="testimonial-wrapper clearfix">
+                                        <div class="testimonial-item" style="line-height: 24px;height:182px;">
+                                            <div class="pinglun_title">
+                                                <p class="p1">WHAT PEOPLE SAY</p>
+                                                <p class="p2">Testimonials</p>
+                                            </div>
+                                            <div class="touxiang">
+                                                <div class="t-avatar">
+                                                    <span class="span1">&nbsp;</span>
+                                                    <img alt="..." src="http://qd111556430527.web.xorder.com/image/9/cache/data/product/product12-540x700-940x350_9.jpg" class="img-circle" />
+                                                    <span class="span2">&nbsp;</span>
+                                                </div>
+                                            </div>
+                                            <div class="pinglun_wenzi">
+                                                <div class="testimonial" style="margin-bottom: 0px;">
+                                                    <div>
+                                                        <p>&quot;So good. Timely delivery of my item .Easy order, easy delivery. Quality and service are all what I want.Can't ask for more.Very happy to cooperate with xorder.com.cn&quot;</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript"><!--
+                        $(document).ready(function() {  $('.colorbox-t').colorbox({iframe:true, innerWidth:640, innerHeight:390});});
+                        //--></script>
+                        <style>.tb-border{bottom: -20px;border-color: #fff transparent transparent transparent;}.tb-background{border-color: #fff transparent transparent transparent;}.triangle-border{position: absolute;left: 50%;overflow: hidden;width: 0;height: 0;border-width: 15px 15px 15px 5px ;border-style: solid dashed dashed dashed;}</style>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-0 col-md-0">
+                        <div id="pavcarousel3" class="carousel slide pavcarousel box hidden-xs">
+                            <div class="box-heading" style="line-height:2px;margin-bottom:20px;">
+                                <span>COOPERATION</span>
+                            </div>
+                            <div class="box box-content">
+                                <div class="carousel-controls">
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="row item active">
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <div class="item-inner">
+                                                <img src="http://qd111556430527.web.xorder.com/image/9/cache/data/manufacture/1-180x80.png-174x88_9.jpg" alt="test" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <div class="item-inner">
+                                                <img src="http://qd111556430527.web.xorder.com/image/9/cache/data/manufacture/1-180x80.png-174x88_9.jpg" alt="test" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <div class="item-inner">
+                                                <img src="http://qd111556430527.web.xorder.com/image/9/cache/data/manufacture/1-180x80.png-174x88_9.jpg" alt="test" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <div class="item-inner">
+                                                <img src="http://qd111556430527.web.xorder.com/image/9/cache/data/manufacture/3-180x80.png-174x88_9.jpg" alt="test" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <div class="item-inner">
+                                                <img src="http://qd111556430527.web.xorder.com/image/9/cache/data/manufacture/4-180x80.png-174x88_9.jpg" alt="test" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2">
+                                            <div class="item-inner">
+                                                <img src="http://qd111556430527.web.xorder.com/image/9/cache/data/manufacture/5-180x80.png-174x88_9.jpg" alt="test" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript"><!--
+                        $('#pavcarousel3').carousel({interval:false});
+                        //--></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="box-heading">
+                            <span>Contact Us</span>
+                        </div>
+                        <div class="box-content">
+                            <ul>
+                                <li style="margin-top:4px;line-height:20px;"><span class="fa fa-home" style="padding-right:5px;margin-top:1px;"></span>PO Box 16122 Collins Street West Victoria 8007 Australia</li>
+                                <li style="margin-top:14px;"><span class="fa fa-phone" style="padding-right:5px;"></span>01666 89 1113</li>
+                                <li style="margin-top:14px;"><span class="fa fa-envelope" style="padding-right:5px;"></span>111@qq.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+                        <div class="box-heading">
+                            <span>Site Map</span>
+                        </div>
+                        <div class="box-content">
+                            <ul>
+                                <li><a href="http://qd111556430527.web.xorder.com/?route=information/information&amp;information_id=287">About us</a></li>
+                                <li><a href="http://qd111556430527.web.xorder.com/?route=information/information&amp;information_id=288">Case</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="box-heading">
+                            <span>Products</span>
+                        </div>
+                        <div class="box-content">
+                            <ul class="box-category1">
+                                <li class="haschild"> <a href="http://qd111556430527.web.xorder.com/?route=product/category&amp;path=1708">Accessories</a> </li>
+                                <li class="haschild"> <a href="http://qd111556430527.web.xorder.com/?route=product/category&amp;path=1710">Blazers</a> </li>
+                                <li class=""> <a href="http://qd111556430527.web.xorder.com/?route=product/category&amp;path=1711">Co-ords</a> </li>
+                                <li class=""> <a href="http://qd111556430527.web.xorder.com/?route=product/category&amp;path=1706">Coats &amp; Jackets11333</a> </li>
+                                <li class=""> <a href="http://qd111556430527.web.xorder.com/?route=product/category&amp;path=1707">Curve &amp; Plus Size</a> </li>
+                                <li class=""> <a href="http://qd111556430527.web.xorder.com/?route=product/category&amp;path=1713">test2</a> </li>
+                                <li class=""> <a href="http://qd111556430527.web.xorder.com/?route=product/category&amp;path=1709">Watches</a> </li>
+                            </ul>
+                        </div>
+                        <script type="text/javascript">    $("ul.box-category1").find("li:gt(4)").hide();</script>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="box-content" style="margin-top:42px;">
+                            <div style="font-size: 16px;">
+                                <img id="Authenticate" src="image//9/data/home/xorder_verified_black.png" onmousemove="changeimg();" onmouseout="changeout();" style="cursor: pointer;padding-bottom: 3px;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span style="font-weight: bold;">VERIFIED</span>
+                            </div>
+                            <div id="box1" onmouseover="changeimg()" onmouseout="changeout()">
+                                <p>Verified&nbsp;Supplier&nbsp;&nbsp;Trade assurance Limit </p>
+                            </div>
+                            <div class="input-group">
+                                <div id="track">
+                                    <div>
+                                        <input id="MyCode" type="text" class="inputNew" style="padding:0px;width:190px;text-indent: 2px" />
+                                        <button type="button" class="button_mini " style="background:#fff;border-left: 1px solid #ccc;" id="Mydemo" onclick="Myddd()" data-toggle="modal" data-target="#myModal">Track</button>
+                                    </div>
+                                    <div class="modal fade" style="overflow-y:hidden" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel">Track Order</h4>
+                                                </div>
+                                                <div class="modal-body" id="MyDetal"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <style type="text/css">                body.modal-open {                    margin-right: 0px;                }                #box1 p{                  color: #333333;                  padding: 5px 10px 0 10px;                  font-weight: bold;                }                #box1{                  position: absolute;                  top: 12px;                  left: 10px;                      overflow: hidden;                  display:none;                  width: auto;                  height: 30px;                   background: #ffffff;                  border:1px solid #ccc;                  text-align:center;                  z-index: 9999;                  }              </style>
+                            <script type="text/javascript">                  function changeimg(){                      $("#Authenticate").attr('src','image/9/data/home/xorder_verified.png');                      document.getElementById("box1").style.display="block";                  }                  function changeout(){                      $("#Authenticate").attr('src',"image/9/data/home/xorder_verified_black.png");                      document.getElementById("box1").style.display="none";                  }              </script>
+                            <div class="list-folow" style="margin-top:10px;">
+                                <a class="fa fa-facebook" style="margin-left:0px;">&nbsp;</a>
+                                <a class="fa fa-twitter">&nbsp;</a>
+                                <a class="fa fa-google-plus">&nbsp;</a>
+                                <a class="fa fa-pinterest">&nbsp;</a>
+                                <a class="fa fa-linkedin">&nbsp;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="powered">
+            <div class="container">
+                <script type="text/javascript">            $(function () {                var scroll_top = $(window).scrollTop();                if (scroll_top  <  20 ) {                    $('#top').css('display', 'none');                } else {                    $('#top').css('display', 'block');                }                $('.scrollup').click(function() {                    $("html, body").animate({                        scrollTop: 0                    }, 600);                    return false;                });            });            $(window).scroll(function () {                var scroll_top = $(window).scrollTop();                if (scroll_top  <  20 ) {                    $('#top').fadeOut('slow');                } else {                    $('#top').fadeIn('slow');                }            });        </script>
+                <div id="top" style="display: none;">
+                    <a style="    background: #969696 none repeat scroll 0 0;    border-radius: 100%;    bottom: 82px;    color: #fff !important;    font-size: 13px;    font-weight: 600;    height: 40px;    padding: 2px;    position: fixed;    right: 10px;    text-align: center;    text-transform: uppercase;    width: 40px;    z-index: 9999;" class="scrollup"> <i class="fa fa-angle-up"></i> <span>Top</span> </a>
+                </div>
+                <div class="powered">
+                    <div class="copyright">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-sm-12" style="text-align: left;">
+                            <p style="margin:0;padding:0;"> Powered By <span><a target="_blank" href="http://www.Xorder.com.cn" style="color:#a1a5ab;">Xorder</a></span> <span style="display: inline-block;float: right;"><img src="/image/9/xorder/pay.png" /></span> </p>
+                        </div>
+                    </div>
+                    <style type="text/css">         .weixin{ width:32px; height:44px;position:relative; font-size:12px; text-align:center;}         .weixin a{width:32px; height:44px; display:block; position:absolute; left:0; top:0; }         .weixin .weixin_nr{padding:10px; background:#fff; text-align:center; position:absolute; left:-45px;bottom: 54px; display:none;}         .weixin .weixin_nr img{ margin-bottom:5px;}         .weixin .weixin_nr .arrow{ width:0; height:0; border-top:10px solid #ffffff;border-left:10px solid transparent;border-right:10px solid transparent; position:absolute; left:50px; top:125px;}         .weixin.on .weixin_nr{ display:block;}                 </style>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<div style="display:none">
+    <script src="http://s4.cnzz.com/z_stat.php?id=&amp;web_id=" language="JavaScript"></script>
+</div>
+<style>        .online_inquirybc0f5858937d7f9e388b2daad5380844{color:#6d6d6d; text-align:left; font:12px "微软雅黑",tahoma,arial;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 ul,ol {list-style:none;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 img {border:none; vertical-align:middle;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 table {border-collapse:collapse;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 em {font-style:normal;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 a:link, a:visited {color:#6d6d6d; text-decoration:none;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 a:hover, a:active {color:#FF9900; text-decoration:none;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .overz {overflow:auto; zoom:1; overflow-x:hidden; overflow-y:hidden;}        .helper-button a {background: url("http://img.xorder.com/common/talk1.png") no-repeat;cursor: pointer;display: block;height: 60px;width: 60px;background-size: auto 60px;}        .helper-button a:hover{background-position:0 0; }        .helper-wrap {box-shadow: 0 1.5rem 2rem rgba(0,0,0,.3);border-radius: 4px 4px 4px 4px;position: fixed;right: 53px;bottom: 50px;width: 340px;height:500px;z-index: 10000;display:none;_position:absolute;_bottom:auto; _top:expression(eval(document.documentElement.scrollTop+112));}        .helper-box {background: #f9fafa;position: relative;text-align: left;width: 340px;z-index: 10000;height:100%;}        .helper-box-tit{height:40px;padding:0;background-color: #fff;}        .helper-box-info {background: none repeat scroll 0 0 #FFFAEC;border: 1px solid #FEA337;margin: 3px 15px;padding: 7px 10px;}        .helper-box-info  a:hover{text-decoration: underline;}        .helper-box-close {cursor: pointer;display: inline;float: right;height: 19px;width: 19px;margin-top:-30px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .title{line-height: 40px;text-align: center;font-size: 14px;color:#333;}        .helper-box-close a {background-repeat: no-repeat;display: block;height: 100%;width: 100%;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .helper-wrap .tab_box{margin:5%;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .helper-wrap .tab_box h2{color: #333;font-size: 12px;margin:15px 0 0;text-align: center;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .helper-wrap .tab_box h3{color: #999;font-size: 12px;margin-bottom:0px;text-align: center;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .helper-wrap .adver_title{width:100%;background-color: #fff;padding:5%;border:1px solid #eee;text-align: center;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .helper-wrap .adver_title .p1{font-size: 14px;color:#333;margin-bottom: 0px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .helper-wrap .adver_title .p2{font-size: 14px;color:#666;line-height: 18px;margin:0;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .helper-wrap .helper-box .helper-box-bot a{line-height:40px;height:40px;display:inline-block; font-size: 16px;margin-left:7px;padding:0 10px;margin-top:10px;border-radius:3px;color:#FFF;float:left;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .helper-wrap .helper-box .helper-box-bot a:hover{font-weight: bold;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .helper-wrap .helper-box-bot {height: 56px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .helper-wrap .helper-box-bot ul li{float:left;width:140px;margin:5px 0;height:21px;line-height:21px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form{border:1px solid #ddd;padding:5%;width:100%;margin:0 auto;background: #fff;display: block}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form h2, .contact_form label {font-family:"Arial", serif;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .form_hint, .required_notification {font-size: 11px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form ul {list-style-type:none;list-style-position:outside;margin:0px;padding:0px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form li{position:relative;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form label {width:97%;margin-top: 3px;display:inline-block;float:left;padding:3px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form input {height:30px; width:100%; padding:5px 8px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form input, .contact_form textarea { border:1px solid #ddd;background-color: #fff;border-radius:2px;padding-right:30px;-moz-transition: padding .25s; -webkit-transition: padding .25s; -o-transition: padding .25s;transition: padding .25s;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form textarea {padding:8px; width:100%;height:70px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form input:required, .contact_form textarea:required {font-family:'Arial',serif;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form label:required {color:#f00;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form input:required:valid, .contact_form textarea:required:valid {border-color: #28921f;outline:magenta;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form input:focus:invalid, .contact_form textarea:focus:invalid {border-color: #b03535;outline:magenta;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .form_hint {background: #ed4f58;border-radius: 3px 3px 3px 3px;color: white;margin-left:8px;padding: 1px 6px;z-index: 999;position: absolute;display: none;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .form_hint::before {content: "\25C0";color:#d45252;position: absolute;top:1px;left:-6px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form input:focus + .form_hint {display: inline;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form input:required:valid + .form_hint {background: #28921f;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form input:required:valid + .form_hint::before {color:#28921f;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 button.submit {background-color: #525252;border-radius: 3px;-webkit-border-radius: 3px;-moz-border-radius: 3px;-ms-border-radius: 3px;-o-border-radius: 3px;color: white;font-weight: bold;padding: 6px 20px;text-align: center;width:100%;margin: 10px 0 0px;border: 0;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 button.submit:hover {opacity:.85;cursor: pointer; }        .online_inquirybc0f5858937d7f9e388b2daad5380844 .helper-wrap .tab_box2{padding:0;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .helper-wrap .tab_box2 h2{color: #333;font-size: 12px;margin:20px 0 5px;text-align: center;}        .helper-wrap .tab_box2 h3{color: #999;font-size: 12px;margin-bottom:15px;text-align: center;}        .online_inquirybc0f5858937d7f9e388b2daad5380844.formbox{width:488px;margin:0px auto;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .formcon table input{width:200px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .formcon table td{padding:5px;line-height:24px;}        .helper-wrap .adver_title2{width: 90%;overflow: hidden;padding:0 5%;}        .helper-wrap .adver_title2 .p3{font-size: 14px;color:#333;text-align: left;margin:0;}        .helper-wrap .adver_title2 .p4{font-size: 14px;color:#333;line-height: 18px;text-align: left;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .adver-tx{float: left;width: 10%;margin-right: 5%;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .adver-tx img{border-radius:50px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .adver-nr{float: left;width: 85%;background-color: #fff;border: 1px solid #eee;border-radius: 2px;padding: 5%;text-align: left;position:relative;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .adver-nr .sjx{position: relative;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .adver-nr .sjx:before{box-sizing: content-box;width: 0px;height: 0px;position: absolute;top: -15px;right: 15px;padding: 0;border-bottom: 8px solid #FFFFFF;border-top: 8px solid transparent;border-left: 8px solid transparent;border-right: 8px solid transparent;display: block;content: '';z-index: 12;border-width: 6px 6px;border-color: #fff #fff transparent transparent;bottom: 0;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .adver-nr .sjx:after{box-sizing: content-box;width: 0px;height: 0px;position: absolute;top: -18px;right: 15px;padding: 0;border-bottom: 9px solid #cccccc;border-top: 9px solid transparent;border-left: 9px solid transparent;border-right: 9px solid transparent;display: block;content: '';z-index: 10;border-width: 8px 8px;border-color: #eee #eee transparent transparent;bottom: 0;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .box{position: relative;z-index: 1;width: 100%;height: 460px;padding:0;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .box .boxcenter{width: 100%;height: 46px;background: #fff;position: absolute;bottom: 0;border-top: 1px solid #eee;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .box .boxcenter .boxc_c{width: 100%;height: 60px;padding: 3%;outline:magenta;border: 1px solid #fff;font-family: 'Arial',serif;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .box .boxcenter .boxc_b{width: 300px;height: 30px;position: absolute;right: 20px;bottom: 8px;border-radius:2px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .box .boxcenter .boxc_b a{font-size:14px;color:#fff;line-height:30px;background:#525252;display:block;text-align:center;text-decoration:none;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .box .boxcenter .boxc_b a:hover{opacity: .85}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .box .timeline{width: 100%;height: 100%;position: absolute;top: 0px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .timeline .nextbox{width: 100%;height: 70%;position: absolute;top: 0;left: 0;overflow: auto;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .timeline .nextbox-main{padding:0 5%;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .timeline .nextbox-main .p5{background: #d5d5d5;padding: 5%!important;border-radius: 2px ;text-align: left;float: right;margin-right: 4%;font-size: 14px;text-indent: 0;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .a{width: 100%;height: 80px;border-radius: 6px;margin-top: 10px;font-size: 16px;line-height: 20px;text-indent: 20px;word-break: break-all;position: relative;left:0; }        .online_inquirybc0f5858937d7f9e388b2daad5380844 .a .b{width:6px;height:6px;border-radius:50%;border:2px solid #fff;background:#9DCFE1;position:absolute;top:0;right:-10px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 #time{font-size:12px;color:#999;text-align: center;display: block;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 #hour{font-size:12px;color:#999;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .nextbox-main .sjx2{position: relative;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 .nextbox-main .sjx2:before{box-sizing: content-box;width: 0px;height: 0px;position: absolute;top: 0px;right: -300px;padding: 0;border-bottom: 8px solid #d5d5d5;border-top: 8px solid transparent;border-left: 8px solid transparent;border-right: 8px solid transparent;display: block;content: '';z-index: 12;border-width: 6px 6px;border-color: #d5d5d5 transparent transparent #d5d5d5;bottom: 0;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 #scroll-1{overflow:auto;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 #scroll-1div{width:400px;height:400px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 #scroll-1::-webkit-scrollbar {width:5px;height:5px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 #scroll-1::-webkit-scrollbar-thumb{background:#ccc;border-radius:4px;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 #scroll-1::-webkit-scrollbar-corner{background:#82AFFF;}        .online_inquirybc0f5858937d7f9e388b2daad5380844 #scroll-1::-webkit-scrollbar-resizer{background:#FF0BEE;}        #kf-cs .dhk{color: #999;width: 170px;font-size: 12px;border: 1px solid #eee;box-shadow: 0 0 7px 3px #bbb;padding: 5px;line-height: 14px;background-color: #fff;}        #kf-cs .dhk:before{position: absolute;top: 20px;width: 0;height: 0;left: 105%;margin-left: -10px;content: " ";border-right: 8px solid transparent;border-top: 8px solid transparent;border-bottom: 8px solid transparent;border-left: 8px solid #fff;}        @media screen and (max-width: 768px){          html{-moz-box-sizing:border-box;-webkit-box-sizing:border-box; box-sizing:border-box;-moz-transition:all 0.3s ease-in-out;-webkit-transition:all 0.3s ease-in-out;-o-transition:all 0.3s ease-in-out;-ms-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}          .helper-wrap{width:100%;right: 0;bottom: 0;height: 95%;}          .helper-box{width: 100%;}          .online_inquirybc0f5858937d7f9e388b2daad5380844 .helper-wrap .tab_box{height:88%;}          .online_inquirybc0f5858937d7f9e388b2daad5380844 .contact_form li{margin-bottom: 5%}          .online_inquirybc0f5858937d7f9e388b2daad5380844 .box .boxcenter .boxc_b{width: 80%;height: 30px;position: absolute;right: 10%;bottom: 8px;border-radius:2px;}          .online_inquirybc0f5858937d7f9e388b2daad5380844 .box{position: relative;z-index: 1;width: 100%;height: 100%;padding:0;}          .online_inquirybc0f5858937d7f9e388b2daad5380844 .helper-wrap .tab_box2{padding:0;height:90%;}        }    </style>
+<div id="kf-cs" style="cursor: pointer;position: fixed; bottom: 15px;right: 90px;z-index:10000;">
+    <div class="dhk">
+        <span style="color:#333;">We`re not online.</span>
+        <br />You can make inquiries or check order information！
+    </div>
+</div>
+<div id="kf-cs2" class="online_inquirybc0f5858937d7f9e388b2daad5380844 helper-button" style="position:fixed; width:61px;height:60px;right:10px;bottom: 10px;z-index:10000; _position:absolute;_bottom:auto;    ">
+    <a href="#" onclick="return false;"></a>
+</div>
+<div id="kf-cs3" class="online_inquirybc0f5858937d7f9e388b2daad5380844 helper-button-samll" style="display:none;cursor: pointer;position:fixed; width:61px;height:60px;right:5px;bottom: 26px;z-index:10000; _position:absolute;_bottom:auto; text-align: right; padding-top: 16px;padding-right: 5px;  ">
+    <img style="border-radius: 50%;width: 60px;" src="http://img.xorder.com/common/talk1.png" />
+</div>
+<div class="online_inquirybc0f5858937d7f9e388b2daad5380844 formbox">
+    <div class="formcon">
+        <div id="onebc0f5858937d7f9e388b2daad5380844">
+            <div class="helper-wrap " style="cursor:move;">
+                <div class="helper-box">
+                    <div class="helper-box-tit">
+                        <div class="title">
+                            support
+                        </div>
+                        <div class="helper-box-close">
+                            <a onclick="return false;" title="close">X</a>
+                        </div>
+                    </div>
+                    <div class="tab_box" id="adver">
+                        <div class="adver_title">
+                            <p class="p1">We`re not online.</p>
+                            <p class="p2">You can make inquiries or <br />check order information</p>
+                        </div>
+                        <h2>－07 September 2017－</h2>
+                        <h3 class="__him__"></h3>
+                        <div class="adver_form">
+                            <form class="contact_form" action="#" method="post" name="contact_form">
+                                <ul>
+                                    <li> <label for="usernamebc0f5858937d7f9e388b2daad5380844">Your name:</label> <input id="usernamebc0f5858937d7f9e388b2daad5380844" name="usernamebc0f5858937d7f9e388b2daad5380844" type="text" value="" placeholder="" required="" /> </li>
+                                    <li> <label for="emailbc0f5858937d7f9e388b2daad5380844">E-mail:</label> <input id="emailbc0f5858937d7f9e388b2daad5380844" type="emailbc0f5858937d7f9e388b2daad5380844" name="emailbc0f5858937d7f9e388b2daad5380844" value="" placeholder="" required="" /> </li>
+                                    <li> <label for="messagebc0f5858937d7f9e388b2daad5380844">message:</label> <textarea id="messagebc0f5858937d7f9e388b2daad5380844" name="messagebc0f5858937d7f9e388b2daad5380844" cols="40" rows="6" placeholder="Type your message or input order No.# to track" required=""></textarea> </li>
+                                    <li> <button id="button" class="submit" type="button">Send message</button> </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="db-wz" style="font-size:12px;color:#fff;text-align:right;margin-top:10px;text-shadow: 0 0.1rem 0.6rem rgba(0,0,0,.7);display:table;float:right;">
+                    Powered by Xorder
+                </div>
+            </div>
+        </div>
+        <div id="twobc0f5858937d7f9e388b2daad5380844" style="display:none">
+            <div class="helper-wrap " style="cursor:move;" title="">
+                <div class="helper-box">
+                    <div class="helper-box-tit">
+                        <div class="title">
+                            support
+                        </div>
+                        <div class="helper-box-close">
+                            <a onclick="return false;" title="close">X</a>
+                        </div>
+                    </div>
+                    <div class="tab_box2" id="adver">
+                        <div class="box">
+                            <div class="timeline">
+                                <div class="nextbox" id="scroll-1">
+                                    <h2>－07 September 2017－</h2>
+                                    <h3 class="__him__"></h3>
+                                    <div class="adver_title2">
+                                        <div class="adver-tx">
+                                            <img src="http://img.xorder.com/common/tx.png" />
+                                        </div>
+                                        <div class="adver-nr">
+                                            <i class="sjx"></i>
+                                            <p class="p3">We`re not online.</p>
+                                            <p class="p4">We have received your enquiry, and we shall reply within 24 hours</p>
+                                        </div>
+                                    </div>
+                                    <div class="nextbox-main"></div>
+                                </div>
+                            </div>
+                            <div class="boxcenter">
+                                <div class="boxc_b">
+                                    <a id="send_again">Send Again</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="db-wz" style="font-size:12px;color:#fff;text-align:right;margin-top:10px;text-shadow: 0 0.1rem 0.6rem rgba(0,0,0,.7);display:table;float:right;">
+                    Powered by Xorder
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">        $(document).ready(function()  {            tar_hide();            function tar_show(){              setTimeout(function(){                $("#kf-cs").show();                tar_hide();              }, 30000);            }            function tar_hide(){              setTimeout(function(){                $("#kf-cs").hide();                tar_show();              },30000);            }            var myTime = new Date();            var hour = myTime.getHours();            var minutes = myTime.getMinutes();            if (hour > 12) {                var postfix = 'PM';                hour -= 12;            } else {                var postfix = 'AM';            }            if (minutes < 10) {                minutes = '0' + minutes;            }            $('.online_inquirybc0f5858937d7f9e388b2daad5380844 .__him__').html(hour + ':' + minutes + ' ' + postfix);            setInterval(function () {                var myTime = new Date();                var hour = myTime.getHours();                var minutes = myTime.getMinutes();                if (hour > 12) {                    var postfix = 'PM';                    hour -= 12;                } else {                    var postfix = 'AM';                }                if (minutes < 10) {                    minutes = '0' + minutes;                }                $('.online_inquirybc0f5858937d7f9e388b2daad5380844 .__him__').html(hour + ':' + minutes + ' ' + postfix);            }, 1000);            $("#kf-cs2").click(function () {                $(".helper-wrap").toggle("fast");                $("#kf-cs").hide();                $("#kf-cs2").hide();                if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {                    $('html').css({'width': '96%','height': '98%','background': '#000', 'margin': '2% 1% 0 1%','border-radius': '5px'});                  }            });            $('#kf-cs3 ').click(function () {                $(".helper-wrap").toggle("fast");            });            $(".helper-box-close").click(function () {                $(".helper-wrap").hide("fast");                $("#kf-cs").show();                $("#kf-cs2").show();                if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {                    $('html').css({'width': '100%','height': '100%','background': '#fff', 'margin': '0','border-radius': '0px'});                  }            });            $(".online_inquirybc0f5858937d7f9e388b2daad5380844 #advertiser").mousemove(                function () {                    $(this).siblings().children("a").removeClass("on");                    $(this).children("a").addClass("on");                    $("#affili").fadeOut(10,function(){$("#adver").fadeIn(10);});                }            );            $(".online_inquirybc0f5858937d7f9e388b2daad5380844 #affiliate").mousemove(                function () {                    $(this).siblings().children("a").removeClass("on");                    $(this).children("a").addClass("on");                    $("#adver").fadeOut(10,function(){  $("#affili").fadeIn(10);});                }            );            $(".online_inquirybc0f5858937d7f9e388b2daad5380844 .con li a").click(function () {                    $(this).parent().siblings().children(".helper-box-list-con").slideUp(300);                    $(this).parent().children(".helper-box-list-con").slideToggle(300);                }            );            $('#send_again').click(function () {                $("#onebc0f5858937d7f9e388b2daad5380844").show();                $("#twobc0f5858937d7f9e388b2daad5380844").hide();                $('textarea[name=messagebc0f5858937d7f9e388b2daad5380844]').val('');            });            $(".online_inquirybc0f5858937d7f9e388b2daad5380844 #button").click(function(){                var usernamebc0f5858937d7f9e388b2daad5380844=document.getElementById("usernamebc0f5858937d7f9e388b2daad5380844");                var emailbc0f5858937d7f9e388b2daad5380844=document.getElementById("emailbc0f5858937d7f9e388b2daad5380844");                var messagebc0f5858937d7f9e388b2daad5380844=document.getElementById("messagebc0f5858937d7f9e388b2daad5380844");                if(usernamebc0f5858937d7f9e388b2daad5380844.value=='' || usernamebc0f5858937d7f9e388b2daad5380844.value==null){                    $("#usernamebc0f5858937d7f9e388b2daad5380844").css('border-color','#ed4f58');                }else{                    $("#usernamebc0f5858937d7f9e388b2daad5380844").css('border-color','#28921f');                    if(emailbc0f5858937d7f9e388b2daad5380844.value=='' || emailbc0f5858937d7f9e388b2daad5380844.value==null){                        $("#emailbc0f5858937d7f9e388b2daad5380844").css('border-color','#ed4f58');                    }else{                        $("#emailbc0f5858937d7f9e388b2daad5380844").css('border-color','#28921f');                        if(messagebc0f5858937d7f9e388b2daad5380844.value=='' || messagebc0f5858937d7f9e388b2daad5380844.value==null){                            $("#messagebc0f5858937d7f9e388b2daad5380844").css('border-color','#ed4f58');                        }else{                            $("#messagebc0f5858937d7f9e388b2daad5380844").css('border-color','#28921f');                            $.ajax({                                url: 'index.php?route=module/online_inquiry/inquiry',                                type: 'post',                                data:'username=' + $('input[name=usernamebc0f5858937d7f9e388b2daad5380844]').val() + '&email=' + $('input[name=emailbc0f5858937d7f9e388b2daad5380844]').val() + '&message=' + $('textarea[name=messagebc0f5858937d7f9e388b2daad5380844]').val(),                                dataType: 'json',                                beforeSend: function() {                                },                                success: function(json) {                                    if (json['status']) {                                        $("#onebc0f5858937d7f9e388b2daad5380844").hide();                                        $("#twobc0f5858937d7f9e388b2daad5380844").show();                                    }                                }                            });                        }                    }                }            });        });    </script>
+<script type="text/javascript">    $(document).ready(function () {$('#MyCode').val('Input Order No.#').css("color","rgb(186,193,185)");$('#MyCode').focus(function (){if($(this).val()=='Input Order No.#'){$(this).val('');}});$('#MyCode').blur(function (){if($(this).val()==''){$(this).val('Input Order No.#').css("color","rgb(186,193,185)");}});    });</script>
+<script type="text/javascript">    function Myddd() {        var OrderID = document.getElementById("MyCode").value;        $.ajax({            type: "GET",            url: "/?route=common/footer/getSchedule",            dataType: "html",            cache: false,            data: { OrderId: OrderID},            success: function (html) {                document.getElementById("MyDetal").innerHTML = html;$(function () {                    for (var i = 0; i < $('.a').length; i++) {                        if (i != 0) {                            $('.a').eq(i).find('.a2').hide();                            $('.a').eq(i).find('.a3').hide();                        }                    }                    $(".a1").click(function () {                        $(".a2").hide();                        $(".a3").hide();                        $(this).closest(".a").find(".a2").show();                        $(this).closest(".a").find(".a3").show();                    });                });            }        });    }</script>
+</body>
+</html>

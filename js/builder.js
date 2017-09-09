@@ -1589,16 +1589,45 @@
         init: function() {
 
             // Add Below Code by LEADGEN BUILDER //
-            var imp_flag = $.jStorage.get('site-flag');
-            if(imp_flag == 1)
+            // var imp_flag = $.jStorage.get('site-flag');
+            /*if(imp_flag == 1)
             {
                 var file_json = 'builder.json?nocache='+ (new Date()).getTime();
-            }else{  
+            }else{
                 var file_json = 'site.json?nocache='+ (new Date()).getTime();
             }
             // End Code by LEADGEN BUILDER //   
             $.getJSON(file_json, function (data) {
-                
+
+                if( data.pages !== undefined ) {
+                    site.pages = data.pages;
+                } else {
+                    site.pages = {index: {
+                        blocks: [],
+                        page_id: 1,
+                        pages_title: '',
+                        meta_description: '',
+                        meta_keywords: '',
+                        header_includes: '',
+                        page_css: ''
+                    }};
+                }
+
+
+
+
+                //fire custom event
+                $('body').trigger('siteDataLoaded');
+                builderUI.populateCanvas();
+                if(imp_flag == 1)
+                {
+                    $.jStorage.deleteKey('site-flag');
+                }
+            });*/
+
+            //aaron rewrite start
+            var file_php = 'site_json.php?url=' + needToDesignUrl;
+            $.getJSON(file_php, function (data) {
                 if( data.pages !== undefined ) {
                     site.pages = data.pages;
                 } else {
@@ -1616,11 +1645,10 @@
                 //fire custom event
                 $('body').trigger('siteDataLoaded');
                 builderUI.populateCanvas();
-                if(imp_flag == 1)
-                {
-                    $.jStorage.deleteKey('site-flag');
-                }
             });
+
+
+            //aaron rewrite end
             $(this.buttonNewPage).on('click', site.newPage);
             $(this.modalPageSettings).on('show.bs.modal', site.loadPageSettings);
             $(this.buttonSubmitPageSettings).on('click', site.updatePageSettings);

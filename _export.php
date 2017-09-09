@@ -1,7 +1,6 @@
 <?php
 ob_start();
 
-
 $html = '';
 
 $pages = $_POST['pages'];
@@ -35,6 +34,14 @@ function get_inner_html( $node ) {
     }
 
     return $innerHTML;
+}
+
+function innerXml($node)
+{
+    $out = $node->ownerDocument->saveXML($node);
+    $re = "{^<(\\w*)(?:\\s*\\w+=(?:\"[^\"]*\"|\'[^\']*\'))*\\s*>(.*)</\\1>$}";
+    preg_match($re, $out, $mat);
+    return $mat[2];
 }
 
 file_put_contents('tmp/index.html',  $html);

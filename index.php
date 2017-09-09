@@ -1625,6 +1625,15 @@
     <script>
     var siteUrl = '';
     var baseUrl = '';
+    <?php
+            if (isset($_GET['url'])) {
+                $url = $_GET['url'];
+            } else {
+                $url = '';
+            }
+    ?>
+    var needToDesignUrl = '<?php echo $url; ?>';
+
     </script>
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/jquery-migrate-1.0.0.js"></script>

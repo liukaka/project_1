@@ -17,9 +17,40 @@ if( isset($_POST['data']) && $_POST['data'] != '' ) {
 		fclose($myfile);
 
 	} else {
+		$ignores = ['header.html', 'center.html', 'footer.html'];
+		$flag = true;
+		$json = $_POST['data'];
+		
+		foreach($json['pages'] as $key1 => $pages) {
+			foreach ($pages as $key2 => $page) {
+				foreach($page as $key3 => $block) {
+					if (strpos($block['frames_original_url'], 'center.html') !== false) {
+						$flag = false;
+					}
+					foreach ($ignores as $ignore) {
+						if (strpos($block['frames_original_url'], $ignore) !== false) {
+							unset($json['pages'][$key1][$key2][$key3]);
+						}
+						
+					}
+					
+					if (isset($json['pages'][$key1][$key2][$key3])) {
+						if ($flag) {
+							$json['pages'][$key1][$key2][$key3]['position'] = 'content_top';
+						} else {
+							$json['pages'][$key1][$key2][$key3]['position'] = 'content_buttom';
+						}
+					}
+					
+					
+				}
+				
+			}
+			
+		}
 
 		$myfile = fopen($json_file, "w");
-		fwrite($myfile, json_encode($_POST['data']));
+		fwrite($myfile, json_encode($json));
 		fclose($myfile);
 
 	}

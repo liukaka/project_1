@@ -1113,6 +1113,8 @@
                 _this.frameCover.style.height = height+"px";
                 _this.frameHeight = height;
                 $('.frameCover').removeClass('fresh');
+                pageContainer.style.overflowY = 'hidden';
+                pageContainer.parentNode.style.overflowY = 'hidden';
             }, 500);
         };
             

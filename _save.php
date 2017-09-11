@@ -20,6 +20,13 @@ if( isset($_POST['data']) && $_POST['data'] != '' ) {
 		$ignores = ['header.html', 'center.html', 'footer.html'];
 		$flag = true;
 		$json = $_POST['data'];
+
+        ob_start();
+        require_once 'site/skeleton.html';
+        $skeleton = ob_get_contents();
+        ob_clean();
+
+        $domain = $_SESSION['needToDesignUrl'];
 		
 		foreach($json['pages'] as $key1 => $pages) {
 			foreach ($pages as $key2 => $page) {
@@ -35,6 +42,11 @@ if( isset($_POST['data']) && $_POST['data'] != '' ) {
 					}
 					
 					if (isset($json['pages'][$key1][$key2][$key3])) {
+
+                        $content = preg_replace('#<div id="page" class="page">[\s\S]*</div>#', '<div id="page" class="page">' . $block['frames_content'] .'</div>', $skeleton);
+
+                        file_put_contents('site/' . $domain  . str_replace('elements', '', $block['frames_original_url']), $content);
+
 						if ($flag) {
 							$json['pages'][$key1][$key2][$key3]['position'] = 'content_top';
 						} else {

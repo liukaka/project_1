@@ -19,7 +19,7 @@ if ($_GET['url']) {
 
 }
 //get the url html
-$site_html = file_get_contents('http://' . $url);
+$site_html = file_get_contents('http://' . $url . '/?desgin=1');
 
 
 $site_dir = 'site/' . $url;

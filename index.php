@@ -88,6 +88,7 @@
                     <span class="fui-check"></span>
                     <span class="bLabel">Nothing to save</span>
                 </a>
+
                 <div class="modes" id="siteBuilderModes">
                     <b>BUILDING MODE:</b>
                     <label class="radio primary first" id="modeElementsLabel" data-toggle="tooltip" data-placement="bottom" title="Move blocks around on the canvas">

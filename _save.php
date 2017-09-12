@@ -1,5 +1,6 @@
 <?php
 require_once 'library/session.php';
+require_once 'config.php';
 $return = [];
 
 $json_dir = 'json/' . $_SESSION['needToDesignUrl'];
@@ -26,6 +27,8 @@ if( isset($_POST['data']) && $_POST['data'] != '' ) {
         $skeleton = ob_get_contents();
         ob_clean();
 
+        $skeleton = str_replace('{{config_http}}', CONFIG_HTTP, $skeleton);
+
         $domain = $_SESSION['needToDesignUrl'];
 		
 		foreach($json['pages'] as $key1 => $pages) {
@@ -45,7 +48,7 @@ if( isset($_POST['data']) && $_POST['data'] != '' ) {
 
                         $content = preg_replace('#<div id="page" class="page">[\s\S]*</div>#', '<div id="page" class="page">' . $block['frames_content'] .'</div>', $skeleton);
 
-                        file_put_contents('site/' . $domain  . str_replace('elements', '', $block['frames_original_url']), $content);
+                        file_put_contents('site/' . $domain  . '/' . $key3 . '_' . str_replace('elements/', '', $block['frames_original_url']), $content);
 
 						if ($flag) {
 							$json['pages'][$key1][$key2][$key3]['position'] = 'content_top';

@@ -7,4 +7,4 @@
  */
 
 define('CONFIG_LANGUAGE', 'zh');
-define('CONFIG_HTTP', 'http://design.php/');
+define('CONFIG_HTTP', 'http://design.com/');

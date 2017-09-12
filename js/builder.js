@@ -1582,6 +1582,7 @@
         buttonSubmitPageSettings: document.getElementById('pageSettingsSubmittButton'),
         modalPageSettings: document.getElementById('pageSettingsModal'),
         buttonSave: document.getElementById('savePage'),
+        buttonPublish: document.getElementById('publishPage'),
         messageStart: document.getElementById('start'),
         divFrameWrapper: document.getElementById('frameWrapper'),
         skeleton: document.getElementById('skeleton'),
@@ -1655,6 +1656,7 @@
             $(this.modalPageSettings).on('show.bs.modal', site.loadPageSettings);
             $(this.buttonSubmitPageSettings).on('click', site.updatePageSettings);
             $(this.buttonSave).on('click', function(){site.save(true);});
+            $(this.buttonPublish).on('click', site.publish);
             $(this.buttonEmptyPage).on('click', site.emptyPage);
             //auto save time 
             this.autoSaveTimer = setTimeout(site.autoSave, bConfig.autoSaveTimeout);
@@ -1743,6 +1745,24 @@
 
             });
         },
+		
+		/*
+			publish all change to website
+		*/
+		publish : function () {
+			$("a#publishPage").addClass('disabled');
+			
+			$.ajax({
+                url: '_publish.php',
+                method: 'POST',
+                data: {data: 'publish'},
+                dataType: "json"
+            }).done(function (res) {
+                //enable button
+                $("a#publishPage").removeClass('disabled');
+				
+            });
+		},
         
         /*
             preps the site data before sending it to the server

@@ -45,7 +45,7 @@ if( isset($_POST['data']) && $_POST['data'] != '' ) {
 
                         $content = preg_replace('#<div id="page" class="page">[\s\S]*</div>#', '<div id="page" class="page">' . $block['frames_content'] .'</div>', $skeleton);
 
-                        file_put_contents('site/' . $domain  . str_replace('elements', '', $block['frames_original_url']), $content);
+                        file_put_contents('site/' . $domain  . '/' . $key3 . '_' . str_replace('elements/', '', $block['frames_original_url']), $content);
 
 						if ($flag) {
 							$json['pages'][$key1][$key2][$key3]['position'] = 'content_top';

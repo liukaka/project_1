@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=10">
-    <title>LeadGen - Multipurpose Marketing Landing Page Pack with Page Builder</title>
+    <title>xorder 可视化设置</title>
     <meta name="description" content="LeadGen is a conversion ratio and speed optimized multi-purpose marketing landing page template with drag & drop page builder and tons of readymade elements and demos with greater level of customization possibilities." />
     <meta name="keywords" content="Marketing, landing page, creative, html5, css3, page builder, drag & drop, multi-purpose, one page, aweber, mailchimp, active campaign, campaign monitor, get response, mailer lite, custom form, product, hotel and resort, resume, personal, restaurant, corporate business, interior design, software, spa salon, travel agency, app landing page, design agency, start-up, e-learning, sports and gym, seo, wedding invitation, hosting, online shopping, yoga and fitness, music show, finance and account, e-book, event, medical, real estate, portfolio, digital marketing, inner content page, sign-up, 404 not found, coming soon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,6 +87,10 @@
                 <a href="#" id="savePage" data-toggle="modal" class="btn btn-primary btn-embossed pull-right">
                     <span class="fui-check"></span>
                     <span class="bLabel">Nothing to save</span>
+                </a>
+				 <a href="#" id="publishPage" data-toggle="modal" class="btn btn-primary btn-embossed pull-right">
+                    <span class="fui-check"></span>
+                    <span class="bLabel">publish now</span>
                 </a>
 
                 <div class="modes" id="siteBuilderModes">

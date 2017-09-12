@@ -364,6 +364,10 @@
         {"url":"elements/web-1.html","height":877, "thumbnail":"elements/images/thumbs/footer-4.jpg"},
         {"url":"elements/web-2.html","height":877, "thumbnail":"elements/images/thumbs/footer-4.jpg"},
         {"url":"elements/web-3.html","height":877, "thumbnail":"elements/images/thumbs/footer-4.jpg"}
+    ],
+    "producttabs":[
+        {"url":"elements/producttabs-1.html","height":877, "thumbnail":"elements/images/thumbs/footer-4.jpg"},
+        {"url":"elements/producttabs-2.html","height":877, "thumbnail":"elements/images/thumbs/footer-4.jpg"}
     ]
 }
 }

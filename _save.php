@@ -1,5 +1,6 @@
 <?php
 require_once 'library/session.php';
+require_once 'config.php';
 $return = [];
 
 $json_dir = 'json/' . $_SESSION['needToDesignUrl'];
@@ -25,6 +26,8 @@ if( isset($_POST['data']) && $_POST['data'] != '' ) {
         require_once 'site/skeleton.html';
         $skeleton = ob_get_contents();
         ob_clean();
+
+        $skeleton = str_replace('{{config_http}}', CONFIG_HTTP, $skeleton);
 
         $domain = $_SESSION['needToDesignUrl'];
 		

@@ -368,6 +368,7 @@
 
     "about":[
 	{"url":"elements/about-1.html","height":877, "thumbnail":"elements/images/thumbs/footer-4.jpg"}
+    ],
 
     "producttabs":[
         {"url":"elements/producttabs-1.html","height":877, "thumbnail":"elements/images/thumbs/producttabs-1.jpg","sandbox":true,"loaderFunction":"startSlideshow"}

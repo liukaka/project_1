@@ -364,6 +364,9 @@
         {"url":"elements/web-1.html","height":877, "thumbnail":"elements/images/thumbs/footer-4.jpg"},
         {"url":"elements/web-2.html","height":877, "thumbnail":"elements/images/thumbs/footer-4.jpg"},
         {"url":"elements/web-3.html","height":877, "thumbnail":"elements/images/thumbs/footer-4.jpg"}
+    ],
+    "about":[
+	{"url":"elements/about-1.html","height":877, "thumbnail":"elements/images/thumbs/footer-4.jpg"}
     ]
 }
 }

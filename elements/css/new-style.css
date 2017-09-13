@@ -1,0 +1,22 @@
+/*producttabs-1*/
+.team-style3 .team-social{width:20%;height:100%;right: 0;}
+.no-margin-tb{width: 100%;margin-bottom: 5px!important;}
+.no-margin-tb a{width: 30px;display: table;border: 1px solid #eee;height: 30px;margin: 0 auto;}
+.team-style3 .team-social{background: rgba(0,0,0,0);}
+.no-margin-tb a i{width:30px;line-height: 30px;font-size: 16px!important}
+.no-margin-tb a i:hover {color:#039427!important;cursor:pointer;}
+.text-gray{color:#666!important}
+.small-icon-text{padding: 5px 0;background: #333;font-size: 12px;color: #fff;position: absolute;right: 65px;z-index: 9999;width: 100px;display: none}
+.small-icon-text1{top:22px;}
+.small-icon-text2{top:66px;}
+.small-icon-text3{top:109px;}
+.small-icon-text4{top:151px;}
+.no-margin-tb a:hover span{display: block}
+.small-icon-text:before{position: absolute;top: 10px;width: 0;height: 0;left: 100%;margin-left: 0px;content: " ";border-right: 6px solid transparent;border-top: 6px solid transparent;border-bottom: 6px solid transparent;border-left: 6px solid #333;}
+.team-style3 .team-details{padding: 30px 20px;}
+.team-style3 .owl-item{
+        width: 298px !important;
+    }
+.team-style3 .owl-pagination-bottom .owl-pagination{display: none}
+.owl-dark-pagination .owl-buttons .owl-prev{left: -30px;font-size: 24px;width: 30px;height: 30px;border: 1px solid #333;color: #333;text-align: center;line-height: 30px;}
+.owl-dark-pagination .owl-buttons .owl-next{right: -30px;font-size: 24px;width: 30px;height: 30px;border: 1px solid #333;color: #333;text-align: center;line-height: 30px;}

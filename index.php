@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php require_once 'config.php';?>
+<?php require_once 'language/' . CONFIG_LANGUAGE . '.php';?>
+<?php extract($_); ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -73,39 +76,39 @@
         <div class="container">
             <header class="clearfix" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
                 <a href="#" id="clearScreen" class="btn btn-danger btn-embossed pull-right actionButtons" style="margin-left: 10px">
-                    <span class="fui-trash"></span> Empty Page
+                    <span class="fui-trash"></span> <?php echo $text_empty_page; ?>
                 </a>
                 <a href="#previewModal" data-toggle="modal" class="btn btn-inverse btn-embossed pull-right actionButtons" id="buttonPreview">
-                    <span class="fui-window"></span> Preview
+                    <span class="fui-window"></span> <?php echo $text_preview; ?>
                 </a>
                 <a href="#exportModal" id="exportPage" data-toggle="modal" class="btn btn-info btn-embossed pull-right actionButtons">
-                    <span class="fui-export"></span> Export
+                    <span class="fui-export"></span> <?php echo $text_export; ?>
                 </a>
                 <a href="#seoModal" id="seoButton" data-toggle="modal" class="btn btn-info btn-embossed  pull-right actionButtons btn-warning">
-                    <span class="fui-gear"></span> SEO
+                    <span class="fui-gear"></span> <?php echo $text_seo; ?>
                 </a>
                 <a href="#" id="savePage" data-toggle="modal" class="btn btn-primary btn-embossed pull-right">
                     <span class="fui-check"></span>
-                    <span class="bLabel">Nothing to save</span>
+                    <span class="bLabel"><?php echo $text_nothing_to_save; ?></span>
                 </a>
 				 <a href="#" id="publishPage" data-toggle="modal" class="btn btn-primary btn-embossed pull-right">
                     <span class="fui-check"></span>
-                    <span class="bLabel">publish now</span>
+                    <span class="bLabel"><?php echo $text_publish_now; ?></span>
                 </a>
 
                 <div class="modes" id="siteBuilderModes">
-                    <b>BUILDING MODE:</b>
+                    <b><?php echo $text_building_mode; ?>:</b>
                     <label class="radio primary first" id="modeElementsLabel" data-toggle="tooltip" data-placement="bottom" title="Move blocks around on the canvas">
                         <input type="radio" name="mode" id="modeBlock" value="block" data-toggle="radio" checked="">
-                        Blocks
+                        <?php echo $text_blocks; ?>
                     </label>
                     <label class="radio primary first" id="modeContentLabel" data-toggle="tooltip" data-placement="bottom" title="Edit content" style="display: none">
                         <input type="radio" name="mode" id="modeContent" value="content" data-toggle="radio">
-                        Content
+                        <?php echo $text_content; ?>
                     </label>
                     <label class="radio primary first" id="modeStyleLabel" data-toggle="tooltip" data-placement="bottom" title="Edit details" style="display: none">
                         <input type="radio" name="mode" id="modeStyle" value="styling" data-toggle="radio">
-                        Details
+                        <?php echo $text_details; ?>
                     </label>
                 </div>
             </header>
@@ -1638,6 +1641,10 @@
             }
     ?>
     var needToDesignUrl = '<?php echo $url; ?>';
+	
+	<?php foreach ($js as $key => $test) { ?>
+	var <?php echo $key  ?> = '<?php echo $test;  ?>'
+	<?php } ?>
 
     </script>
     <script src="js/vendor/jquery.min.js"></script>

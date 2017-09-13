@@ -1681,13 +1681,13 @@
                 //reset timer
                 window.clearInterval(this.autoSaveTimer);
                 this.autoSaveTimer = setTimeout(site.autoSave, bConfig.autoSaveTimeout);
-                $('#savePage .bLabel').text("Save now (!)");
+                $('#savePage .bLabel').text(text_save_now);
 
                 if( site.activePage.status !== 'new' ) {
                     site.activePage.status = 'changed';
                 }
             } else {
-                $('#savePage .bLabel').text("Nothing to save");
+                $('#savePage .bLabel').text(text_nothing_to_save);
                 site.updatePageStatus('');
             }
         },
@@ -2260,7 +2260,7 @@
                 $('#exportModal > form #exportSubmit').show('');
                 $('#exportModal > form #buy-full-version').hide('');
             }
-            $('#exportModal > form #exportCancel').text('Cancel & Close');
+            $('#exportModal > form #exportCancel').text(text_cancel_close);
             /// End LEADGEN BUILDER Code ///
         },
         
@@ -2291,7 +2291,7 @@
         */
         exportFormSubmit: function() {
             // $('#exportModal > form #exportSubmit').hide('');
-            $('#exportModal > form #exportCancel').text('Close Window');
+            $('#exportModal > form #exportCancel').text(text_close_window);
         }
     
     };

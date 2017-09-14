@@ -48,7 +48,22 @@ if( isset($_POST['data']) && $_POST['data'] != '' ) {
 
                         $content = preg_replace('#<div id="page" class="page">[\s\S]*</div>#', '<div id="page" class="page">' . $block['frames_content'] .'</div>', $skeleton);
 
-                        file_put_contents('site/' . $domain  . '/' . $key3 . '_' . str_replace('elements/', '', $block['frames_original_url']), $content);
+                        $html_name = $key3 . '_' . str_replace('elements/', '', $block['frames_original_url']);
+                        $iframe_id = str_replace('.html', '', $html_name);
+                        $post_message_js = <<<HTML
+        <script>
+            var postHeight = function() {
+                var h  = document.body.scrollHeight;
+                var postdata = h + "#$iframe_id";
+                parent.postMessage(postdata, "http://$domain");
+            }
+
+            setInterval(postHeight, 500);
+        </script>
+HTML;
+
+
+                        file_put_contents('site/' . $domain  . '/' . $html_name, $content . $post_message_js);
 
 						if ($flag) {
 							$json['pages'][$key1][$key2][$key3]['position'] = 'content_top';

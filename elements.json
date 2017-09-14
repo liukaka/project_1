@@ -39,7 +39,8 @@
     {"url":"elements/slider-3.html","height":877, "thumbnail":"elements/images/thumbs/slider-3.jpg","sandbox":true,"loaderFunction":"startSlideshow"},
     {"url":"elements/slider-6.html","height":877, "thumbnail":"elements/images/thumbs/slider-6.jpg","sandbox":true,"loaderFunction":"startSlideshow"},
     {"url":"elements/slider-4.html","height":877, "thumbnail":"elements/images/thumbs/slider-4.jpg","sandbox":true,"loaderFunction":"startSlideshow"},
-    {"url":"elements/slider-8.html","height":877, "thumbnail":"elements/images/thumbs/slider-8.jpg","sandbox":true,"loaderFunction":"startSlideshow"}
+    {"url":"elements/slider-8.html","height":877, "thumbnail":"elements/images/thumbs/slider-8.jpg","sandbox":true,"loaderFunction":"startSlideshow"},
+     {"url":"elements/slider-9.html","height":500, "thumbnail":"elements/images/thumbs/slider-9.jpg","sandbox":true,"loaderFunction":"startSlideshow"}
     ],
     "Hero":[
     {"url":"elements/hero-17.html","height":877, "thumbnail":"elements/images/thumbs/hero-17.jpg"},
@@ -128,7 +129,7 @@
     "Features":[
     {"url":"elements/feature-1.html","height":644, "thumbnail":"elements/images/thumbs/feature-1.jpg"},
     {"url":"elements/feature-30.html","height":644, "thumbnail":"elements/images/thumbs/feature-30.jpg"},
-    {"url":"elements/feature-3.html","height":644, "thumbnail":"elements/images/thumbs/feature-3.jpg"},
+    {"url":"elements/feature-3.html","height":877, "thumbnail":"elements/images/thumbs/feature-3.jpg"},
     {"url":"elements/feature-29.html","height":644, "thumbnail":"elements/images/thumbs/feature-29.jpg"},
     {"url":"elements/feature-7.html","height":644, "thumbnail":"elements/images/thumbs/feature-7.jpg"},
     {"url":"elements/feature-9.html","height":644, "thumbnail":"elements/images/thumbs/feature-9.jpg"},
@@ -162,7 +163,8 @@
     {"url":"elements/feature-34.html","height":644, "thumbnail":"elements/images/thumbs/feature-34.jpg"},
     {"url":"elements/feature-35.html","height":644, "thumbnail":"elements/images/thumbs/feature-35.jpg"},
     {"url":"elements/feature-36.html","height":644, "thumbnail":"elements/images/thumbs/feature-36.jpg"},
-    {"url":"elements/feature-37.html","height":644, "thumbnail":"elements/images/thumbs/feature-37.jpg"}
+    {"url":"elements/feature-37.html","height":644, "thumbnail":"elements/images/thumbs/feature-37.jpg"},
+    {"url":"elements/feature-38.html","height":644, "thumbnail":"elements/images/thumbs/feature-37.jpg"}
     ],
     "Texts&nbsp;and&nbsp;Titles":[
     {"url":"elements/title-1.html","height":877, "thumbnail":"elements/images/thumbs/title-1.jpg"},

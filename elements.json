@@ -29,7 +29,8 @@
     {"url":"elements/header-15.html","height":567, "thumbnail":"elements/images/thumbs/header-15.jpg"},
     {"url":"elements/header-16.html","height":567, "thumbnail":"elements/images/thumbs/header-16.jpg"},
     {"url":"elements/header-17.html","height":567, "thumbnail":"elements/images/thumbs/header-17.jpg"},        
-    {"url":"elements/header-18.html","height":567, "thumbnail":"elements/images/thumbs/header-18.jpg"}
+    {"url":"elements/header-18.html","height":567, "thumbnail":"elements/images/thumbs/header-18.jpg"},        
+    {"url":"elements/header-31.html","height":567, "thumbnail":"elements/images/thumbs/header-31.jpg"}
     ],  
     "Sliders":[
     {"url":"elements/slider-2.html","height":877, "thumbnail":"elements/images/thumbs/slider-2.jpg","sandbox":true,"loaderFunction":"startSlideshow"},

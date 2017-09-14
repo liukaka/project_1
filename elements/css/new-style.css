@@ -21,7 +21,7 @@ html{font-size:100px;}
 
 @media screen and (max-width:768px){
 .feature-style3{width:90%;margin:0 auto;}
-.feature-style3 .feature-box .feature-title{font-size:0.2rem!important;line-height: 0.3rem;}
+.feature-style3 .feature-box .feature-title{font-size:0.3rem!important;line-height: 0.4rem;}
 .feature-style3 .col-xs-12{width: 48%!important;background: #f6f6f6;margin: 0 1%;padding: 5%;}
 .feature-style3 .col-xs-12 h3{margin-top: 0.2rem}
 .feature-style3 .feature-box i{width:50px!important;height:50px!important;line-height: 50px!important;font-size:0.5rem!important;}
@@ -31,12 +31,12 @@ html{font-size:100px;}
 /*producttabs-1*/
 .team-style3 .team-social{width:20%;height:100%;right: 0;}
 .no-margin-tb{width: 100%;margin-bottom: 5px!important;}
-.no-margin-tb a{width: 30px;display: table;border: 1px solid #eee;height: 30px;margin: 0 auto;}
+.no-margin-tb a{width: 30px;display: table;border: 1px solid #ddd;height: 30px;margin: 0 auto;}
 .team-style3 .team-social{background: rgba(0,0,0,0);}
 .no-margin-tb a i{width:30px;line-height: 30px;font-size: 16px!important}
 .no-margin-tb a i:hover {color:#039427!important;cursor:pointer;}
 .text-gray{color:#666!important}
-.small-icon-text{padding: 5px 0;background: #333;font-size: 12px;color: #fff;position: absolute;right: 65px;z-index: 9999;width: 100px;display: none}
+.small-icon-text{padding: 5px 0;background: #333;font-size: 12px;color: #fff;position: absolute;right: 55px;z-index: 9999;width: 100px;display: none}
 .small-icon-text1{top:22px;}
 .small-icon-text2{top:66px;}
 .small-icon-text3{top:109px;}

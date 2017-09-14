@@ -58,7 +58,7 @@ html{font-size:100px;}
 .custom-style1 h2{text-align: left!important;}
 .custom-1-btn-register a{background: #4a9e38;color:#fff;border-radius:5px;display:block;width:160px;padding:2% 0;}
 .custom-style1 .col-md-9.col-sm-9.col-xs-9.text-left h2{font-size: 0.27rem!important}
-.custom-style1 .col-md-3.col-sm-3.col-xs-3.custom-1-btn-register h2 a{font-size: 0.27rem!important}
+.custom-style1 .col-md-3.col-sm-3.col-xs-3.custom-1-btn-register h2 a{font-size: 0.2rem!important}
 @media screen and (max-width:768px){
 	.custom-style1 .col-md-9.col-sm-9.col-xs-9.text-left{padding-right:0;}
 .custom-style1 .col-md-9.col-sm-9.col-xs-9.text-left h2{font-size: 0.16rem!important;margin-bottom: 0!important;}

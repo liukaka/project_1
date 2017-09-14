@@ -40,7 +40,7 @@
     {"url":"elements/slider-6.html","height":877, "thumbnail":"elements/images/thumbs/slider-6.jpg","sandbox":true,"loaderFunction":"startSlideshow"},
     {"url":"elements/slider-4.html","height":877, "thumbnail":"elements/images/thumbs/slider-4.jpg","sandbox":true,"loaderFunction":"startSlideshow"},
     {"url":"elements/slider-8.html","height":877, "thumbnail":"elements/images/thumbs/slider-8.jpg","sandbox":true,"loaderFunction":"startSlideshow"},
-     {"url":"elements/slider-9.html","height":500, "thumbnail":"elements/images/thumbs/slider-3.jpg","sandbox":true,"loaderFunction":"startSlideshow"}
+     {"url":"elements/slider-9.html","height":500, "thumbnail":"elements/images/thumbs/slider-9.jpg","sandbox":true,"loaderFunction":"startSlideshow"}
     ],
     "Hero":[
     {"url":"elements/hero-17.html","height":877, "thumbnail":"elements/images/thumbs/hero-17.jpg"},

@@ -355,7 +355,8 @@
     {"url":"elements/footer-17.html","height":877, "thumbnail":"elements/images/thumbs/footer-17.jpg"},
     {"url":"elements/footer-10.html","height":877, "thumbnail":"elements/images/thumbs/footer-10.jpg"},
     {"url":"elements/footer-11.html","height":877, "thumbnail":"elements/images/thumbs/footer-11.jpg"},
-    {"url":"elements/footer-14.html","height":877, "thumbnail":"elements/images/thumbs/footer-14.jpg"}
+    {"url":"elements/footer-14.html","height":877, "thumbnail":"elements/images/thumbs/footer-14.jpg"},
+     {"url":"elements/footer-19.html","height":877, "thumbnail":"elements/images/thumbs/footer-14.jpg"}
     ],
     "test":[
         {"url":"elements/test-1.html","height":877, "thumbnail":"elements/images/thumbs/footer-4.jpg"}
@@ -367,15 +368,19 @@
     ],
 
     "about":[
-	{"url":"elements/about-1.html","height":877, "thumbnail":"elements/images/thumbs/footer-4.jpg"}
+	{"url":"elements/about-1.html","height":877, "thumbnail":"elements/images/thumbs/footer-4.jpg","sandbox":true,"loaderFunction":"startSlideshow"}
     ],
 
     "producttabs":[
         {"url":"elements/producttabs-1.html","height":877, "thumbnail":"elements/images/thumbs/producttabs-1.jpg","sandbox":true,"loaderFunction":"startSlideshow"}
     ],
     "custom":[
-        {"url":"elements/custom-1.html","height":877, "thumbnail":"elements/images/thumbs/custom-1.jpg","sandbox":true,"loaderFunction":"startSlideshow"}
+        {"url":"elements/custom-1.html","height":877, "thumbnail":"elements/images/thumbs/custom-1.jpg","sandbox":true,"loaderFunction":"startSlideshow"},
+         {"url":"elements/custom-2.html","height":877, "thumbnail":"elements/images/thumbs/custom-1.jpg","sandbox":true,"loaderFunction":"startSlideshow"}
 
+    ],
+     "pavtestimonial":[
+        {"url":"elements/pavtestimonial-1.html","height":877, "thumbnail":"elements/images/thumbs/custom-1.jpg","sandbox":true,"loaderFunction":"startSlideshow"}
     ]
 }
 }

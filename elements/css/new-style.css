@@ -4,9 +4,20 @@ html{font-size:100px;}
 	html{font-size:50px;}
 }
 
+
+/*banner*/
+.one-sixth-screen{height: 500px!important}
+.text-bitter-sweet.title-extra-large-6.font-weight-600.margin-ten-bottom.sm-margin-four-bottom.slider-title.letter-spacing-minus-1.tz-text{font-size:0.5rem!important;}
+.text-light-gray.title-small.main-font.slider-text.width-90.xs-width-100.margin-fourteen-bottom.tz-text{font-size:0.2rem!important;}
+
+@media screen and (max-width:768px){
+.text-bitter-sweet.title-extra-large-6.font-weight-600.margin-ten-bottom.sm-margin-four-bottom.slider-title.letter-spacing-minus-1.tz-text{font-size:0.75rem!important;}
+.text-light-gray.title-small.main-font.slider-text.width-90.xs-width-100.margin-fourteen-bottom.tz-text{font-size:0.3rem!important;}
+}
+
+
 /*卖点*/
 .feature-style3 .feature-box .feature-title{font-size:0.36rem!important;line-height: 0.42rem;}
-
 
 @media screen and (max-width:768px){
 .feature-style3{width:90%;margin:0 auto;}
@@ -14,8 +25,8 @@ html{font-size:100px;}
 .feature-style3 .col-xs-12{width: 48%!important;background: #f6f6f6;margin: 0 1%;padding: 5%;}
 .feature-style3 .col-xs-12 h3{margin-top: 0.2rem}
 .feature-style3 .feature-box i{width:50px!important;height:50px!important;line-height: 50px!important;font-size:0.5rem!important;}
-
 }
+
 
 /*producttabs-1*/
 .team-style3 .team-social{width:20%;height:100%;right: 0;}

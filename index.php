@@ -1651,6 +1651,7 @@
     <script src="js/vendor/jquery-migrate-1.0.0.js"></script>
     <script src="js/vendor/jstorage.js"></script>
     <script src="js/vendor/jquery-ui.min.js"></script>
+    <script src="js/vendor/owl.carousel.min.js"></script>
     <script src="js/vendor/flat-ui-pro.min.js"></script>
     <script src="js/vendor/chosen.min.js"></script>
     <script src="js/vendor/jquery.zoomer.js"></script>

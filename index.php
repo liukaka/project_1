@@ -1,4 +1,4 @@
-﻿<?php require_once 'config.php';?>
+<?php require_once 'config.php';?>
 <?php require_once 'language/' . CONFIG_LANGUAGE . '.php';?>
 <?php extract($_); ?>
 <!DOCTYPE html>
@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=10">
-    <title>xorder 可视化设置</title>
+    <title>xorder 可视编辑</title>
     <meta name="description" content="LeadGen is a conversion ratio and speed optimized multi-purpose marketing landing page template with drag & drop page builder and tons of readymade elements and demos with greater level of customization possibilities." />
     <meta name="keywords" content="Marketing, landing page, creative, html5, css3, page builder, drag & drop, multi-purpose, one page, aweber, mailchimp, active campaign, campaign monitor, get response, mailer lite, custom form, product, hotel and resort, resume, personal, restaurant, corporate business, interior design, software, spa salon, travel agency, app landing page, design agency, start-up, e-learning, sports and gym, seo, wedding invitation, hosting, online shopping, yoga and fitness, music show, finance and account, e-book, event, medical, real estate, portfolio, digital marketing, inner content page, sign-up, 404 not found, coming soon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,13 +39,13 @@
                     <img src="images/leadgen-logo.png">
                 </h3>
                 <ul id="elementCats">
-                    <li><a href="#" id="all">All Blocks</a></li>
+                    <li><a href="#" id="all"><?php echo $text_all_blocks; ?></a></li>
                 </ul>
                 <a class="toggle" href="#">
                     <span class="fui-gear"></span>
                 </a>
                 <h3 class="pages-border">
-                    <span class="fui-windows"></span> Pages
+                    <span class="fui-windows"></span> <?php echo $text_pages; ?>
                 </h3>
                 <ul id="pages">
                     <li style="display: none;" id="newPageLI">
@@ -59,12 +59,12 @@
                 </ul>
                 <div class="sideButtons clearfix">
                     <a href="#" class="btn btn-primary btn-sm btn-embossed" id="addPage">
-                        <span class="fui-plus"></span> Add Page
+                        <span class="fui-plus"></span> <?php echo $text_add_page; ?>
                     </a>
                 </div>
                 <div class="sideButtons clearfix">
                     <button type="button" data-toggle="modal" data-target="#exp_imp_modal" class="export-import-btn" id="expPage">
-                        <span class="fui-export"></span>Export/ Import
+                        <span class="fui-export"></span><?php echo $text_export; ?>/ <?php echo $text_import; ?>
                     </button>
                 </div>                
             </div><!-- /##main -->
@@ -127,42 +127,42 @@
                     <div id="pageList">
                     </div>
                     <div class="start" id="start">
-                        <span>BUILD YOUR PAGE BY DRAGGING BLOCKS ONTO THE CANVAS</span>
+                        <span><?php echo $text_build_page; ?></span>
                     </div>
                 </div>
             </div><!-- /#screen -->
         </div><!-- /.container -->
         <div id="styleEditor" class="styleEditor scrollbar-inner">
             <a href="javascript:;" class="close"><span class="fui-cross-circle"></span></a>
-            <h3><span class="fui-new"></span> Detail editor</h3>
+            <h3><span class="fui-new"></span><?php echo $text_detail_editor; ?></h3>
             <ul class="breadcrumb">
-                <li>EDITING:</li>
+                <li><?php echo $text_editing; ?>:</li>
                 <li class="active" id="editingElement">p</li>
             </ul>
             <ul class="nav nav-tabs" id="detailTabs">
                 <li class="active">
                     <a href="#tab1">
-                        <span class="fui-new"></span> Style
+                        <span class="fui-new"></span> <?php echo $text_style; ?>
                     </a>
                 </li>
                 <li style="display: none;">
                     <a href="#link_Tab" id="link_Link">
-                        <span class="fui-clip"></span> Link
+                        <span class="fui-clip"></span> <?php echo $text_link; ?>
                     </a>
                 </li>
                 <li style="display: none;">
                     <a href="#image_Tab" id="img_Link">
-                        <span class="fui-image"></span> Image
+                        <span class="fui-image"></span> <?php echo $text_image; ?>
                     </a>
                 </li>
                 <li style="display: none;">
                     <a href="#icon_Tab" id="icon_Link">
-                        <span class="fa fa-flag"></span> Icon
+                        <span class="fa fa-flag"></span> <?php echo $text_icon; ?>
                     </a>
                 </li>
                 <li style="display: none;">
                     <a href="#video_Tab" id="video_Link">
-                        <span class="fa fa-youtube-play"></span> Video
+                        <span class="fa fa-youtube-play"></span> <?php echo $text_image; ?>
                     </a>
                 </li>
             </ul><!-- /tabs -->
@@ -180,7 +180,7 @@
                 <div class="tab-pane link_Tab" id="link_Tab">
                     <div class="form-group">
                         <select id="internalLinksDropdown" class="form-control select select-primary btn-block mbl">
-                            <option value="#">Choose a page</option>
+                            <option value="#"><?php echo $text_choose_a_page; ?></option>
                             <!--<option value="index.html">index</option>-->
                         </select>
                     </div>                    
@@ -189,7 +189,7 @@
                     </p>
                     <div class="form-group">
                         <select id="pageLinksDropdown" class="form-control select select-primary btn-block mbl">
-                            <option value="#">Choose a block</option>
+                            <option value="#"><?php echo $text_choose_a_block; ?></option>
                         </select>
                     </div>
                     <p class="text-center or">
@@ -198,26 +198,27 @@
                     <input type="text" class="form-control" id="internalLinksCustom" placeholder="http://somewhere.com/somepage" value="">
                 </div><!-- /.tab-pane -->
                 <div class="tab-pane imageFileTab" id="image_Tab">
-                    <label>Enter image path:</label>
+                    <label><?php echo $text_enter_image_path ?>:</label>
                     <input type="text" class="form-control" id="imageURL" placeholder="Enter an image URL" value="">
                     <p class="text-center or">
                         <span>OR</span>
                     </p>
                     <form id="imageUploadForm" action="_upload.php">
-                        <label>Upload image:</label>
+                        <label><?php echo $text_upload_image; ?>:</label>
                         <div class="form-group">
                             <div class="fileinput fileinput-new" data-provides="fileinput">
                                 <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 100%; height: 150px; line-height: 150px;"></div>
                                 <input type="hidden" name="imageBgOld" id="imageBgOld" val="">
                                 <div>
-                                    <label>Recommended image size:</label><p class="recommended-size" id="recommended-size"></p>
+                                    <label><?php echo $text_recommended_image_size; ?>:</label><p class="recommended-size" id="recommended-size"></p>
                                     <span class="btn btn-primary btn-sm btn-embossed btn-file">
-                                        <span class="fileinput-new"><span class="fui-image"></span>&nbsp;&nbsp;Select image</span>
-                                        <span class="fileinput-exists"><span class="fui-gear"></span>&nbsp;&nbsp;Change</span>
+                                        <span class="fileinput-new"><span class="fui-image"></span>&nbsp;&nbsp;<?php echo $text_select_image; ?></span>
+                                        <span class="fileinput-exists"><span class="fui-gear"></span>&nbsp;&nbsp;<?php echo $text_change; ?></span>
                                         <input type="file" name="imageFileField" id="imageFileField">
 
                                     </span>
-                                    <a href="#" class="btn btn-primary btn-sm btn-embossed fileinput-exists" data-dismiss="fileinput"><span class="fui-trash"></span>&nbsp;&nbsp;Remove</a>
+
+                                    <a href="#" class="btn btn-primary btn-sm btn-embossed fileinput-exists" data-dismiss="fileinput"><span class="fui-trash"></span>&nbsp;&nbsp;<?php echo $text_remove; ?></a>
                                 </div>
                             </div>
                         </div>
@@ -225,7 +226,7 @@
                 </div><!-- /.tab-pane -->
                 <!-- /tabs -->
                 <div class="tab-pane iconTab" id="icon_Tab">
-                    <label>Choose an icon: </label>
+                    <label><?php echo $text_choose_an_icon; ?>: </label>
                     <select id="icons" data-placeholder="" class>
                         <option value="fa-address-card-o">&#xf2bc; address-card-o</option>
                         <option value="fa-handshake-o">&#xf2b5; handshake-o</option>
@@ -1192,20 +1193,20 @@
             </div><!-- /.tab-content -->
             <div class="alert alert-success" style="display: none;" id="detailsAppliedMessage">
                 <button class="close fui-cross" type="button" id="detailsAppliedMessageHide"></button>
-                The changes were applied successfully!
+                <?php echo $text_changes_successfully; ?>
             </div>
             <div class="margin-bottom-5">
                 <button type="button" class="btn btn-primary btn-embossed btn-sm btn-block no-margin-left" id="saveStyling"><span class="fui-check-inverted"></span> Apply Changes</button>
             </div>
             <div class="sideButtons clearfix">
                 <button type="button" class="btn btn-inverse btn-embossed btn-xs no-margin-left" id="cloneElementButton">
-                    <span class="fui-windows"></span> Clone
+                    <span class="fui-windows"></span> <?php echo $text_clone; ?>
                 </button>
                 <button type="button" class="btn btn-warning btn-embossed btn-xs" id="resetStyleButton">
-                    <i class="fa fa-refresh"></i> Reset
+                    <i class="fa fa-refresh"></i> <?php echo $text_reset; ?>
                 </button>
                 <button type="button" class="btn btn-danger btn-embossed btn-xs" data-target="#deleteElement" data-toggle="modal" id="removeElementButton">
-                    <span class="fui-cross-inverted"></span> Remove
+                    <span class="fui-cross-inverted"></span> <?php echo $text_remove; ?>
                 </button>
             </div>
         </div><!-- /#styleEditor -->
@@ -1214,7 +1215,7 @@
         </div>
         <div id="loader">
             <img src="images/loading.gif" alt="Loading...">
-            Loading
+            <?php echo $text_loading; ?>
         </div>
         <div class="sandboxes" id="sandboxes" style="display: none"></div>
     </div><!-- /#builder -->
@@ -1226,7 +1227,7 @@
                     <button type="button" class="close" data-dismiss="modal">
                         <span class="fui-cross"></span>
                     </button>
-                    <h4 class="modal-title" id="myModalLabel">SEO Settings for <span id="tz_seo_title" class="text-primary pName">index.html</span></h4>
+                    <h4 class="modal-title" id="myModalLabel"><?php echo $text_seo_settings_for; ?> <span id="tz_seo_title" class="text-primary pName">index.html</span></h4>
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal" role="form" id="pageSettingsForm" action="">
@@ -1235,13 +1236,13 @@
                         <input type="hidden" name="pageName" id="pageName" value="">
                         <div class="optionPane">
                             <div class="form-group">
-                                <label for="name" class="col-sm-8 control-label">Page Title</label>
+                                <label for="name" class="col-sm-8 control-label"><?php echo $text_page_title; ?></label>
                                 <div class="col-sm-12">
                                     <input type="text" class="form-control" id="tz_seo_page_Title" name="tz_seo_page_Title" placeholder="Page title" value="">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="name" class="col-sm-8 control-label">Page Meta Description</label>
+                                <label for="name" class="col-sm-8 control-label"><?php echo $text_page_meta_description; ?></label>
                                 <div class="col-sm-12">
                                     <textarea class="form-control" id="tz_seo_metaDescription" name="tz_seo_metaDescription" placeholder="Page meta description"></textarea>
                                 </div>

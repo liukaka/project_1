@@ -15,8 +15,11 @@ $_['text_nothing_to_save'] = 'Nothing to save';
 $_['text_publish_now'] = 'Publish now';
 $_['text_building_mode'] = 'BUILDING MODE';
 $_['text_blocks'] = 'Blocks';
+$_['text_block_help'] = 'Move blocks around on the canvas';
 $_['text_content'] = 'Content';
+$_['text_content_help'] = 'Edit content';
 $_['text_details'] = 'Details';
+$_['text_details_help'] = 'Edit details';
 $_['text_detail_editor'] = 'Detail editor';
 $_['text_editing'] = 'EDITING';
 $_['text_style'] = 'Style';
@@ -34,6 +37,7 @@ $_['text_choose_a_block'] = 'Choose a block';
 $_['text_upload_image'] = 'Upload image';
 $_['text_recommended_image_size'] = 'Recommended image size';
 $_['text_select_image'] = 'Select image';
+$_['text_select_product'] = 'Select image from site';
 $_['text_change'] = 'Change';
 $_['text_remove'] = 'Remove';
 $_['text_choose_an_icon'] = 'Choose an icon';
@@ -44,6 +48,8 @@ $_['text_loading'] = 'Loading';
 $_['text_seo_settings_for'] = 'SEO Settings for';
 $_['text_page_title'] = 'Page Title';
 $_['text_page_meta_description'] = 'Page Meta Description';
+$_['text_apply_changes'] = 'Apply Changes';
+
 
 //JS
 $js['text_nothing_to_save'] = 'Nothing to save';

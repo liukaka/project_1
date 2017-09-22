@@ -98,15 +98,15 @@
 
                 <div class="modes" id="siteBuilderModes">
                     <b><?php echo $text_building_mode; ?>:</b>
-                    <label class="radio primary first" id="modeElementsLabel" data-toggle="tooltip" data-placement="bottom" title="Move blocks around on the canvas">
+                    <label class="radio primary first" id="modeElementsLabel" data-toggle="tooltip" data-placement="bottom" title="<?php echo  $text_block_help; ?>">
                         <input type="radio" name="mode" id="modeBlock" value="block" data-toggle="radio" checked="">
                         <?php echo $text_blocks; ?>
                     </label>
-                    <label class="radio primary first" id="modeContentLabel" data-toggle="tooltip" data-placement="bottom" title="Edit content" style="display: none">
+                    <label class="radio primary first" id="modeContentLabel" data-toggle="tooltip" data-placement="bottom" title="<?php echo  $text_content_help; ?>" style="display: none">
                         <input type="radio" name="mode" id="modeContent" value="content" data-toggle="radio">
                         <?php echo $text_content; ?>
                     </label>
-                    <label class="radio primary first" id="modeStyleLabel" data-toggle="tooltip" data-placement="bottom" title="Edit details" style="display: none">
+                    <label class="radio primary first" id="modeStyleLabel" data-toggle="tooltip" data-placement="bottom" title="<?php echo  $text_details_help; ?>" style="display: none">
                         <input type="radio" name="mode" id="modeStyle" value="styling" data-toggle="radio">
                         <?php echo $text_details; ?>
                     </label>
@@ -217,9 +217,16 @@
                                         <input type="file" name="imageFileField" id="imageFileField">
 
                                     </span>
+										
 
                                     <a href="#" class="btn btn-primary btn-sm btn-embossed fileinput-exists" data-dismiss="fileinput"><span class="fui-trash"></span>&nbsp;&nbsp;<?php echo $text_remove; ?></a>
                                 </div>
+								   <div>
+									<span class="btn btn-primary btn-sm btn-embossed btn-product">
+                                        <span class="fileinput-new"><span class="fui-product"></span>&nbsp;&nbsp;<?php echo $text_select_product; ?></span>
+                                        <span class="fileinput-exists"><span class="fui-gear"></span>&nbsp;&nbsp;<?php echo $text_change; ?></span>
+                                    </span>
+								   </div>
                             </div>
                         </div>
                     </form>
@@ -1196,7 +1203,7 @@
                 <?php echo $text_changes_successfully; ?>
             </div>
             <div class="margin-bottom-5">
-                <button type="button" class="btn btn-primary btn-embossed btn-sm btn-block no-margin-left" id="saveStyling"><span class="fui-check-inverted"></span> Apply Changes</button>
+                <button type="button" class="btn btn-primary btn-embossed btn-sm btn-block no-margin-left" id="saveStyling"><span class="fui-check-inverted"></span><?php echo $text_apply_changes; ?></button>
             </div>
             <div class="sideButtons clearfix">
                 <button type="button" class="btn btn-inverse btn-embossed btn-xs no-margin-left" id="cloneElementButton">

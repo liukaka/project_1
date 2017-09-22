@@ -49,8 +49,15 @@ html{font-size:100px;}
 .owl-dark-pagination .owl-buttons .owl-prev{left: -30px;font-size: 24px;width: 30px;height: 30px;border: 1px solid #333;color: #333;text-align: center;line-height: 30px;}
 .owl-dark-pagination .owl-buttons .owl-next{right: -30px;font-size: 24px;width: 30px;height: 30px;border: 1px solid #333;color: #333;text-align: center;line-height: 30px;}
 
+.producttabs-style3 .producttabs-social{width:20%;height:100%;right: 0;}
+.producttabs-style3 .producttabs-social{background: rgba(0,0,0,0);}
+.producttabs-style3 .producttabs-details{padding: 30px 20px;}
+
+.producttabs-style3 .owl-pagination-bottom .owl-pagination{display: none}
+
 @media screen and (max-width:768px){
 .team-style3 .owl-item{margin:0 0.85%;}
+.producttabs-style3 .owl-item{margin:0 0.85%;}
 
 }
 

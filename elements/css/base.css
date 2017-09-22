@@ -250,6 +250,9 @@ h6 { font-size:18px; line-height:23px}
 .text-dark-brown { color: #7d6548;}
 .text-light-brown { color: #cec3b5;}
 .text-extra-dark-brown { color: #251b10;}
+.text-333{ color:#333; }
+.text-666{ color:#666; }
+.text-999{ color:#999; }
 
 /* slider typography */
 .slider-text-middle-main { display: table; height: 100%; width: 100% }
@@ -888,6 +891,7 @@ h6 { font-size:18px; line-height:23px}
 .padding-top-70px{ padding-top:70px !important;}
 .padding-top-75px{ padding-top:75px !important;}
 .padding-top-80px{ padding-top:80px !important;}
+.padding-top-100px{ padding-top:100px !important;}
 
 /* padding bottom */
 .padding-one-half-bottom {padding-bottom:0.5% !important}

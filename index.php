@@ -217,19 +217,42 @@
                                         <input type="file" name="imageFileField" id="imageFileField">
 
                                     </span>
-										
-
                                     <a href="#" class="btn btn-primary btn-sm btn-embossed fileinput-exists" data-dismiss="fileinput"><span class="fui-trash"></span>&nbsp;&nbsp;<?php echo $text_remove; ?></a>
                                 </div>
-								   <div>
-									<span class="btn btn-primary btn-sm btn-embossed btn-product">
-                                        <span class="fileinput-new"><span class="fui-product"></span>&nbsp;&nbsp;<?php echo $text_select_product; ?></span>
-                                        <span class="fileinput-exists"><span class="fui-gear"></span>&nbsp;&nbsp;<?php echo $text_change; ?></span>
-                                    </span>
-								   </div>
+								   
                             </div>
                         </div>
                     </form>
+						<div class="margin-bottom-20">
+							<span class="btn btn-primary btn-sm btn-embossed " data-toggle="modal" data-target="#productModal">
+								&nbsp;&nbsp;<?php echo $text_select_product; ?>
+							</span>
+							<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+											</button>
+											<h4 class="modal-title" id="myModalLabel">
+												选择产品
+											</h4>
+										</div>
+										<div class="modal-body">
+											这里将会出现详细的产品信息
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">
+												关闭
+											</button>
+											<button type="button" class="btn btn-primary">
+												确定选择
+											</button>
+										</div>
+									</div><!-- /.modal-content -->
+								</div><!-- /.modal-dialog -->
+							</div><!-- /.modal -->
+
+					   </div>
                 </div><!-- /.tab-pane -->
                 <!-- /tabs -->
                 <div class="tab-pane iconTab" id="icon_Tab">

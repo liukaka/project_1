@@ -224,34 +224,7 @@
                         </div>
                     </form>
 						<div class="margin-bottom-20">
-							<span class="btn btn-primary btn-sm btn-embossed " data-toggle="modal" data-target="#productModal">
-								&nbsp;&nbsp;<?php echo $text_select_product; ?>
-							</span>
-							<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
-											</button>
-											<h4 class="modal-title" id="myModalLabel">
-												选择产品
-											</h4>
-										</div>
-										<div class="modal-body">
-											这里将会出现详细的产品信息
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">
-												关闭
-											</button>
-											<button type="button" class="btn btn-primary">
-												确定选择
-											</button>
-										</div>
-									</div><!-- /.modal-content -->
-								</div><!-- /.modal-dialog -->
-							</div><!-- /.modal -->
-
+							<?php require_once 'product_select.php'; ?>
 					   </div>
                 </div><!-- /.tab-pane -->
                 <!-- /tabs -->
@@ -1694,5 +1667,177 @@
     <script src="js/redactor/bufferButtons.js"></script>
     <script src="js/vendor/jquery.nicescroll.min.js"></script>
 	<script src="js/builder.js"></script>
+	<style>
+		.product-info{
+			cursor: pointer;
+		}
+		.product-info.product_select{
+			border:1px solid #3498db;
+		}
+	</style>
+	
+	<!--js先写在这里-->
+	<script>
+		var product_total = 0;
+		var page_total = 0;
+		$('#productModal').on('show.bs.modal', function () {
+			$.get('/php/website_product_data.php?type=total').done(function (data) {
+				product_total = data.total;
+				page_total = Math.ceil(product_total/9);
+				$('.prevPage').css('display', 'none');
+				if (page_total > 1) {
+					$('.nextPage').css('display', 'inline-block');
+					$('.nextPage').attr('page-now', 1);
+				}
+			});
+			$.get('/php/website_product_data.php?type=product&start=0&limit=9').done(function (data) {
+				var length = data.length;
+				$('.product-content').html('');
+				html = '';
+
+				for (var i = 0; i< length; i++) {
+					if (i % 3 == 0) {
+						html += '<div class="row">';
+						html += '<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">';
+					}
+					
+					html += '<div  style="text-align: center;" class="col-lg-4 col-md-4 col-xs-6 col-sm-12 product-info">';
+					html += '<img style="width:60px;height:60px;" src="' + data[i].image + '">';
+					html += '<ul style="font-size: 8px;list-style-type:none; padding-left: 0px;">';
+					html += '<li>' + data[i].name + '</li>';
+					html += '<li>' + data[i].description + '</li>';
+					html += '<li>' + data[i].date_added + '</li>';
+					html += '</ul>';
+					html += '</div>';
+					
+					if ((i + 1) % 3 == 0 || i == length -1) {
+						html += '</div>';
+						html += '</div>';
+					}
+					
+				}
+				
+				
+				
+				$('.product-content').html(html);
+				
+				$('.product-info').on('click', function () {
+					$('.product-info').removeClass('product_select');
+					$(this).addClass('product_select');
+				});
+				
+				
+			});
+		});
+		
+		
+		
+		$('#productConfirm').click(function() {
+			if ($('.product-info.product_select').length == 0) {
+				alert('请选择产品');
+				return false;
+			}
+			
+			var imgUrl = $('.product-info.product_select img').attr('src');
+			$('.fileinput-preview.thumbnail').append('<img src="' + imgUrl + '">');
+			
+			$('#imageURL').val(imgUrl);
+			$(this).prev().click();
+		});
+		$('.nextPage').click(function () {
+			var now = $('.nextPage').attr('page-now');
+			
+			$.get('/php/website_product_data.php?type=product&start=' + ((parseInt(now) * 9) - 1) + '&limit=9').done(function (data) {
+				var length = data.length;
+				$('.product-content').html('');
+				html = '';
+
+				for (var i = 0; i< length; i++) {
+					if (i % 3 == 0) {
+						html += '<div class="row">';
+						html += '<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">';
+					}
+					
+					html += '<div style="text-align: center;"  class="col-lg-4 col-md-4 col-xs-6 col-sm-12 product-info">';
+					html += '<img style="width:60px;height:60px;" src="' + data[i].image + '">';
+					html += '<ul style="font-size: 8px;list-style-type:none; padding-left: 0px;">';
+					html += '<li>' + data[i].name + '</li>';
+					html += '<li>' + data[i].description + '</li>';
+					html += '<li>' + data[i].date_added + '</li>';
+					html += '</ul>';
+					html += '</div>';
+					
+					if ((i + 1) % 3 == 0 || i == length -1) {
+						html += '</div>';
+						html += '</div>';
+					}
+					
+				}
+				
+				$('.product-content').html(html);
+				
+				$('.product-info').on('click', function () {
+					$('.product-info').removeClass('product_select');
+					$(this).addClass('product_select');
+				});
+				
+				$('.nextPage').attr('page-now', parseInt(now) + 1);
+				
+				$('.prevPage').css('display', 'inline-block');
+				if (parseInt(now) + 1  == page_total) {
+					$('.nextPage').css('display', 'none');
+					
+				} 
+			});
+		});
+		
+		$('.prevPage').click(function () {
+			var now = $('.nextPage').attr('page-now');
+			
+			$.get('/php/website_product_data.php?type=product&start=' + (parseInt(now) - 2) * 8 + '&limit=9').done(function (data) {
+				var length = data.length;
+				$('.product-content').html('');
+				html = '';
+
+				for (var i = 0; i< length; i++) {
+					if (i % 3 == 0) {
+						html += '<div class="row">';
+						html += '<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">';
+					}
+					
+					html += '<div style="text-align: center;"  class="col-lg-4 col-md-4 col-xs-6 col-sm-12 product-info">';
+					html += '<img style="width:60px;height:60px;" src="' + data[i].image + '">';
+					html += '<ul style="font-size: 8px;list-style-type:none; padding-left: 0px;">';
+					html += '<li>' + data[i].name + '</li>';
+					html += '<li>' + data[i].description + '</li>';
+					html += '<li>' + data[i].date_added + '</li>';
+					html += '</ul>';
+					html += '</div>';
+					
+					if ((i + 1) % 3 == 0 || i == length -1) {
+						html += '</div>';
+						html += '</div>';
+					}
+					
+				}
+				
+				
+				
+				$('.product-content').html(html);
+				
+				$('.product-info').on('click', function () {
+					$('.product-info').removeClass('product_select');
+					$(this).addClass('product_select');
+				});
+				
+				$('.nextPage').css('display', 'inline-block');
+				$('.nextPage').attr('page-now', parseInt(now) - 1);
+				
+				if (parseInt(now) - 1 == 1) {
+					$('.prevPage').css('display', 'none');
+				} 
+			});
+		});
+	</script>
 </body>
 </html>

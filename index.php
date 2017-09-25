@@ -35,9 +35,6 @@
     <div id="builder">
         <div class="menu" id="menu">
             <div class="main scrollbar-inner" id="main">
-                <h3>
-                    <img src="images/leadgen-logo.png">
-                </h3>
                 <ul id="elementCats">
                     <li><a href="#" id="all"><?php echo $text_all_blocks; ?></a></li>
                 </ul>
@@ -1678,21 +1675,25 @@
 	
 	<!--js先写在这里-->
 	<script>
-		var product_total = 0;
-		var page_total = 0;
-		$('#productModal').on('show.bs.modal', function () {
-			$.get('/php/website_product_data.php?type=total').done(function (data) {
-				product_total = data.total;
-				page_total = Math.ceil(product_total/9);
-				$('.prevPage').css('display', 'none');
-				if (page_total > 1) {
-					$('.nextPage').css('display', 'inline-block');
-					$('.nextPage').attr('page-now', 1);
-				}
-			});
-			$.get('/php/website_product_data.php?type=product&start=0&limit=9').done(function (data) {
+	
+		var productData = {
+			
+			product_total : 0,
+			page_total : 0,
+			limit : 9,
+			defaultWidth : 200,
+			defaultHight : 200,
+			
+			init : function () {
+				$('#productModal').on('shown.bs.modal', this.beforeModal);
+				$('#productConfirm').on('click', this.Confirm);
+				$('.nextPage').on('click', this.nextPage);
+				$('.prevPage').on('click', this.prevPage);	
+
+			},
+			
+			getHtml : function (data) {
 				var length = data.length;
-				$('.product-content').html('');
 				html = '';
 
 				for (var i = 0; i< length; i++) {
@@ -1702,7 +1703,9 @@
 					}
 					
 					html += '<div  style="text-align: center;" class="col-lg-4 col-md-4 col-xs-6 col-sm-12 product-info">';
-					html += '<img style="width:60px;height:60px;" src="' + data[i].image + '">';
+					html += '<img style="width:60px;height:60px;" src="' + data[i].image + '"/>';
+					html += '<input type="hidden" name="product_id"  value="' + data[i].product_id + '"/>';
+					html += '<input type="hidden" name="product_url"  value="' + data[i].url + '"/>';
 					html += '<ul style="font-size: 8px;list-style-type:none; padding-left: 0px;">';
 					html += '<li>' + data[i].name + '</li>';
 					html += '<li>' + data[i].description + '</li>';
@@ -1717,127 +1720,135 @@
 					
 				}
 				
+				return html;
 				
-				
-				$('.product-content').html(html);
-				
-				$('.product-info').on('click', function () {
-					$('.product-info').removeClass('product_select');
-					$(this).addClass('product_select');
+			},
+			
+			beforeModal : function () {
+				$.get('/php/website_product_data.php?type=total').done(function (data) {
+					productData.product_total = data.total;
+					
+					productData.page_total = Math.ceil(productData.product_total/productData.limit);
+					
+					$('.prevPage').css('display', 'none');
+					if (productData.page_total > 1) {
+						$('.nextPage').css('display', 'inline-block');
+						$('.nextPage').attr('page-now', 1);
+					}
 				});
 				
+				$.get('/php/website_product_data.php?type=product&start=0&limit=' + productData.limit).done(function (data) {
+					
+					var html = productData.getHtml(data);
+					
+					$('.product-content').html(html);
+					
+					$('.product-info').on('click', function () {
+						$('.product-info').removeClass('product_select');
+						$(this).addClass('product_select');
+					});
+					
+					
+				});
+			},
+			
+			Confirm : function () {
+				if ($('.product-info.product_select').length == 0) {
+					alert('请选择产品');
+					return false;
+				}
+			
+				var imgUrl = $('.product-info.product_select img').attr('src');
+				var product_id = $('.product-info.product_select input[name=product_id]').val();
+				var image_size = $('#recommended-size').text();
+				$('#productModal').data('product_url', $('.product-info.product_select input[name=product_url]').val());
 				
-			});
-		});
-		
-		
-		
-		$('#productConfirm').click(function() {
-			if ($('.product-info.product_select').length == 0) {
-				alert('请选择产品');
-				return false;
+				if(image_size) {
+					var h_w_array = image_size.split('X');
+					
+					if (h_w_array[0]) {
+						var width = h_w_array[0].replace(/[^0-9\.]*/g, '');
+					} else {
+						var width = productData.defaultWidth;
+					}
+					
+					if (h_w_array[1]) {
+						var height = h_w_array[1].replace(/[^0-9\.]*/g, '');
+					} else {
+						var height = productData.defaultHight;
+					}
+					
+					$.get('/php/website_product_data.php?type=image&product_id=' + product_id + '&width=' + width + '&height=' + height).done(
+						function (data) {
+							 var imgUrl = data.image;
+							 $('.fileinput-preview.thumbnail').append('<img src="' + imgUrl + '">');
+				
+							 $('#imageURL').val(imgUrl);
+						}
+					);
+					
+					
+				} else {
+					$('.fileinput-preview.thumbnail').append('<img src="' + imgUrl + '">');
+				
+					$('#imageURL').val(imgUrl);
+				} 
+				
+				
+				$(this).prev().click();
+			},
+			
+			nextPage : function () {
+				var now = $('.nextPage').attr('page-now');
+			
+				$.get('/php/website_product_data.php?type=product&start=' + ((parseInt(now) * productData.limit))  + '&limit=' + productData.limit).done(function (data) {
+					
+					var html = productData.getHtml(data);
+					$('.product-content').html(html);
+					
+					$('.product-info').on('click', function () {
+						$('.product-info').removeClass('product_select');
+						$(this).addClass('product_select');
+					});
+					
+					$('.nextPage').attr('page-now', parseInt(now) + 1);
+					
+					$('.prevPage').css('display', 'inline-block');
+					if (parseInt(now) + 1  == productData.page_total) {
+						$('.nextPage').css('display', 'none');
+						
+					} 
+				});
+			},
+			
+			prevPage : function () {
+				
+				var now = $('.nextPage').attr('page-now');
+			
+				$.get('/php/website_product_data.php?type=product&start=' + (parseInt(now) - 2) * productData.limit + '&limit=' + productData.limit ).done(function (data) {
+					
+					var html = productData.getHtml(data);
+					
+					$('.product-content').html(html);
+					
+					$('.product-info').on('click', function () {
+						$('.product-info').removeClass('product_select');
+						$(this).addClass('product_select');
+					});
+					
+					$('.nextPage').css('display', 'inline-block');
+					$('.nextPage').attr('page-now', parseInt(now) - 1);
+					
+					if (parseInt(now) - 1 == 1) {
+						$('.prevPage').css('display', 'none');
+					} 
+				});
 			}
 			
-			var imgUrl = $('.product-info.product_select img').attr('src');
-			$('.fileinput-preview.thumbnail').append('<img src="' + imgUrl + '">');
-			
-			$('#imageURL').val(imgUrl);
-			$(this).prev().click();
-		});
-		$('.nextPage').click(function () {
-			var now = $('.nextPage').attr('page-now');
-			
-			$.get('/php/website_product_data.php?type=product&start=' + ((parseInt(now) * 9) - 1) + '&limit=9').done(function (data) {
-				var length = data.length;
-				$('.product-content').html('');
-				html = '';
-
-				for (var i = 0; i< length; i++) {
-					if (i % 3 == 0) {
-						html += '<div class="row">';
-						html += '<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">';
-					}
-					
-					html += '<div style="text-align: center;"  class="col-lg-4 col-md-4 col-xs-6 col-sm-12 product-info">';
-					html += '<img style="width:60px;height:60px;" src="' + data[i].image + '">';
-					html += '<ul style="font-size: 8px;list-style-type:none; padding-left: 0px;">';
-					html += '<li>' + data[i].name + '</li>';
-					html += '<li>' + data[i].description + '</li>';
-					html += '<li>' + data[i].date_added + '</li>';
-					html += '</ul>';
-					html += '</div>';
-					
-					if ((i + 1) % 3 == 0 || i == length -1) {
-						html += '</div>';
-						html += '</div>';
-					}
-					
-				}
-				
-				$('.product-content').html(html);
-				
-				$('.product-info').on('click', function () {
-					$('.product-info').removeClass('product_select');
-					$(this).addClass('product_select');
-				});
-				
-				$('.nextPage').attr('page-now', parseInt(now) + 1);
-				
-				$('.prevPage').css('display', 'inline-block');
-				if (parseInt(now) + 1  == page_total) {
-					$('.nextPage').css('display', 'none');
-					
-				} 
-			});
-		});
+		};
+		productData.init();
 		
-		$('.prevPage').click(function () {
-			var now = $('.nextPage').attr('page-now');
-			
-			$.get('/php/website_product_data.php?type=product&start=' + (parseInt(now) - 2) * 8 + '&limit=9').done(function (data) {
-				var length = data.length;
-				$('.product-content').html('');
-				html = '';
-
-				for (var i = 0; i< length; i++) {
-					if (i % 3 == 0) {
-						html += '<div class="row">';
-						html += '<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">';
-					}
-					
-					html += '<div style="text-align: center;"  class="col-lg-4 col-md-4 col-xs-6 col-sm-12 product-info">';
-					html += '<img style="width:60px;height:60px;" src="' + data[i].image + '">';
-					html += '<ul style="font-size: 8px;list-style-type:none; padding-left: 0px;">';
-					html += '<li>' + data[i].name + '</li>';
-					html += '<li>' + data[i].description + '</li>';
-					html += '<li>' + data[i].date_added + '</li>';
-					html += '</ul>';
-					html += '</div>';
-					
-					if ((i + 1) % 3 == 0 || i == length -1) {
-						html += '</div>';
-						html += '</div>';
-					}
-					
-				}
-				
-				
-				
-				$('.product-content').html(html);
-				
-				$('.product-info').on('click', function () {
-					$('.product-info').removeClass('product_select');
-					$(this).addClass('product_select');
-				});
-				
-				$('.nextPage').css('display', 'inline-block');
-				$('.nextPage').attr('page-now', parseInt(now) - 1);
-				
-				if (parseInt(now) - 1 == 1) {
-					$('.prevPage').css('display', 'none');
-				} 
-			});
-		});
+		
 	</script>
 </body>
 </html>

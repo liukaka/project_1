@@ -14,9 +14,12 @@ $_['text_seo'] = '搜索引擎优化';
 $_['text_nothing_to_save'] = '保存本页';
 $_['text_publish_now'] = '发布';
 $_['text_building_mode'] = '建设模式';
-$_['text_blocks'] = '排序';
-$_['text_content'] = '修改文字内容';
-$_['text_details'] = '修改样式';
+$_['text_blocks'] = '模块';
+$_['text_block_help'] = '在画布上移动模块';
+$_['text_content'] = '内容';
+$_['text_content_help'] = '编辑内容';
+$_['text_details'] = '样式';
+$_['text_details_help'] = '编辑样式';
 $_['text_detail_editor'] = '细节编辑';
 $_['text_editing'] = '编辑';
 $_['text_style'] = '样式';
@@ -33,7 +36,8 @@ $_['text_choose_a_page'] = '选择一个网页';
 $_['text_choose_a_block'] = '选择一模块';
 $_['text_upload_image'] = '上传一个图片';
 $_['text_recommended_image_size'] = '推荐的图像尺寸';
-$_['text_select_image'] = '选择一个图片';
+$_['text_select_image'] = '从本地选择一个图片';
+$_['text_select_product'] = '从网站中选择一个产品';
 $_['text_change'] = '更换';
 $_['text_remove'] = '移除';
 $_['text_choose_an_icon'] = '选择一个icon';
@@ -44,6 +48,8 @@ $_['text_loading'] = '加载';
 $_['text_seo_settings_for'] = '设置seo';
 $_['text_page_title'] = '网页标题';
 $_['text_page_meta_description'] = '网页Meta描述';
+$_['text_apply_changes'] = '应用';
+
 
 //JS
 $js['text_nothing_to_save'] = '无需保存';
